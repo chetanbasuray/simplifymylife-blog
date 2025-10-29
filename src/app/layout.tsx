@@ -5,32 +5,23 @@ import Image from "next/image";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Simplify My Life Blog",
-  description: "Smart ideas, tools, and guides for an easier everyday life.",
   metadataBase: new URL("https://blog.simplifymylife.app"),
+  title: "Simplify My Life Blog",
+  description: "Smart ideas, tools, and guides to make everyday life simpler.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Simplify My Life Blog",
-    description: "Smart ideas, tools, and guides for an easier everyday life.",
+    description: "Smart ideas, tools, and guides to make everyday life simpler.",
     url: "https://blog.simplifymylife.app",
     siteName: "Simplify My Life",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Simplify My Life Blog",
-      },
-    ],
-        locale: "en_US",
+    images: ["/og-image.png"],
+    locale: "en_US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Simplify My Life Blog",
-    description: "Smart ideas, tools, and guides for an easier everyday life.",
-    images: ["/og-image.png"],
-  },
 };
+
 
 export default function RootLayout({
   children,
