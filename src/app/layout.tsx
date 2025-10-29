@@ -1,86 +1,81 @@
 import "./globals.css";
+import "./tailwind.css";
 import Link from "next/link";
-import type { ReactNode } from "react";
 import Image from "next/image";
-import Script from "next/script";
 
 export const metadata = {
-  metadataBase: new URL("https://blog.simplifymylife.app"),
-  title: "Simplify My Life Blog",
-  description: "Smart ideas, tools, and guides to make everyday life simpler.",
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "Simplify My Life Blog",
-    description: "Smart ideas, tools, and guides to make everyday life simpler.",
-    url: "https://blog.simplifymylife.app",
-    siteName: "Simplify My Life",
-    images: ["/og-image.png"],
-    locale: "en_US",
-    type: "website",
+  title: "Simplify My Life",
+  description:
+    "Smart ideas, thoughtful habits, and practical tools for a calmer, simpler life.",
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
 };
 
-
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        {/* Use the SVG as the favicon */}
-        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/favicon.ico" />
-        {/* Google Analytics */}
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-NWXMKKVCKY"
-        />
-        <Script id="google-analytics">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-NWXMKKVCKY', {
-              cookie_domain: '.simplifymylife.app',
-            });
-          `}
-        </Script>
-      </head>
-      <body className="min-h-screen flex flex-col bg-gray-50 text-gray-800">
-        {/* HEADER */}
-        <header className="border-b border-gray-200 bg-white">
-          <nav className="max-w-4xl mx-auto flex items-center justify-between p-4">
-            <Link href="/blog" className="flex items-center space-x-2">
-                <Image
-                  src="/logo-wordmark.svg"
-                  alt="Simplify My Life logo"
-                  width={160}
-                  height={40}
-                  priority
-                  className="h-10 w-auto"
-                />
+      <body className="min-h-screen flex flex-col font-sans bg-gradient-to-br from-orange-50 to-yellow-50 text-gray-800">
+        {/* ===== Header ===== */}
+        <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-orange-100 shadow-sm">
+          <nav className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <Image
+                src="/logo-wordmark.svg"
+                alt="Simplify My Life"
+                width={220}
+                height={55}
+                className="h-8 w-auto"
+              />
             </Link>
-            <Link
-              href="https://simplifymylife.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-blue-600 border border-blue-200 rounded-md px-3 py-1 hover:bg-blue-50 transition-colors"
-            >
-              ← Back to Main Site
-            </Link>
+
+            {/* Navigation */}
+            <div className="flex gap-6 text-sm font-medium text-gray-700">
+              {[
+                { href: "/", label: "Home" },
+                { href: "/about", label: "About" },
+                { href: "/contact", label: "Contact" },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="relative group hover:text-orange-600 transition"
+                >
+                  {link.label}
+                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-400 transition-all duration-300 group-hover:w-full" />
+                </Link>
+              ))}
+            </div>
           </nav>
         </header>
 
-        {/* MAIN CONTENT */}
-        <main className="flex-1 max-w-3xl w-full mx-auto p-6">{children}</main>
+        {/* ===== Main Content ===== */}
+        <main className="flex-1">{children}</main>
 
-        {/* FOOTER */}
-        <footer className="border-t border-gray-200 bg-white text-sm text-center py-4 text-gray-500">
-          © {new Date().getFullYear()} Simplify My Life. All rights reserved.
+        {/* ===== Footer ===== */}
+        <footer className="bg-gradient-to-r from-orange-50 to-yellow-50 border-t border-orange-100 mt-10">
+          <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col items-center text-center text-sm text-gray-700 space-y-4">
+            <div className="flex flex-wrap justify-center gap-4 text-gray-600 text-sm">
+              <Link href="/privacy" className="hover:text-orange-600">Privacy</Link>
+              <Link href="/about" className="hover:text-orange-600">About</Link>
+              <Link href="/contact" className="hover:text-orange-600">Contact</Link>
+            </div>
+
+            <p className="text-xs text-gray-500">
+              © {new Date().getFullYear()} Simplify My Life — Made with ❤️ using{" "}
+              <Link href="https://nextjs.org" className="underline hover:text-orange-600">Next.js</Link> &{" "}
+              <Link href="https://vercel.com" className="underline hover:text-orange-600">Vercel</Link>.
+            </p>
+          </div>
         </footer>
       </body>
     </html>

@@ -1,8 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
+import readingTime from "reading-time";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 
@@ -14,31 +13,29 @@ export function getSortedPostsData() {
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const matterResult = matter(fileContents);
 
+    const time = readingTime(matterResult.content);
     return {
       slug,
       ...matterResult.data,
+      readingTime: time.text,
+      date: matterResult.data.date
+        ? new Date(matterResult.data.date).toISOString()
+        : null,
     };
   });
-
-  return allPostsData.sort((a, b) =>
-    new Date(b.date) - new Date(a.date)
-  );
+  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export async function getPostData(slug) {
-console.log("getPostData called with slug:", slug); // debug
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
-
   const matterResult = matter(fileContents);
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  const time = readingTime(matterResult.content);
 
   return {
     slug,
-    contentHtml,
     ...matterResult.data,
+    readingTime: time.text,
+    content: matterResult.content,
   };
 }
