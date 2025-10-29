@@ -2,6 +2,7 @@ import "./globals.css";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import Image from "next/image";
+import Script from "next/script";
 
 export const metadata = {
   title: "Simplify My Life Blog",
@@ -42,8 +43,22 @@ export default function RootLayout({
         {/* Use the SVG as the favicon */}
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
         <link rel="alternate icon" href="/favicon.ico" />
+        {/* Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-NWXMKKVCKY"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NWXMKKVCKY', {
+              cookie_domain: '.simplifymylife.app',
+            });
+          `}
+        </Script>
       </head>
-
       <body className="min-h-screen flex flex-col bg-gray-50 text-gray-800">
         {/* HEADER */}
         <header className="border-b border-gray-200 bg-white">
