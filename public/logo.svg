@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Simplify My Life logo">
+  <title>Simplify My Life</title>
+  <defs>
+    <linearGradient id="flowGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#A7F3D0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="28" fill="url(#flowGradient)" opacity="0.2"/>
+
+  <!-- Flowing swirl -->
+  <path d="M18 36c6 8 16 8 22 0 5-6 4-14-2-18-5-3-10-2-13 2-3 4-2 9 2 11 3 2 8 1 10-2"
+        fill="none" stroke="url(#flowGradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Small dot (life spark) -->
+  <circle cx="45" cy="19" r="3" fill="url(#flowGradient)"/>
+</svg>
