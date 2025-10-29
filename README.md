@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Simplify My Life Blog
 
-## Getting Started
+A modern, minimalist blog built with **Next.js 15**, **Tailwind CSS**, and **Markdown** — sharing tools, insights, and ideas to make everyday life simpler.
 
-First, run the development server:
+🌍 **Live Site:** [https://blog.simplifymylife.app](https://blog.simplifymylife.app)
+
+---
+
+## 🧭 Overview
+
+Simplify My Life Blog is part of the larger **SimplifyMyLife.app** ecosystem — a collection of lightweight apps, blogs, and tools focused on simplifying finance, lifestyle, and everyday decisions.
+
+The blog features:
+
+- 📰 Markdown-based posts (easy to write, fast to load)  
+- 🎨 Minimal design powered by Tailwind CSS  
+- ⚙️ Server-side rendering via Next.js 15 App Router  
+- 📊 Google Analytics 4 for insights  
+- ☁️ Deployed on Vercel with automatic HTTPS and CI/CD  
+
+---
+
+## 🧩 Tech Stack
+
+| Layer | Technology |
+|-------|-------------|
+| **Framework** | [Next.js 15](https://nextjs.org/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
+| **Markdown Parsing** | `remark` + `gray-matter` |
+| **Hosting** | [Vercel](https://vercel.com/) |
+| **Analytics** | Google Analytics 4 |
+| **Domain** | [Namecheap](https://www.namecheap.com/) |
+| **SSL** | Auto-provisioned by Vercel (Let's Encrypt) |
+
+---
+
+## 🚀 Local Development
 
 ```bash
+# 1. Clone the repo
+git clone https://github.com/chetanbasuray/simplifymylife-blog.git
+cd simplifymylife-blog
+
+# 2. Install dependencies
+npm install
+
+# 3. Run locally
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 4. Open in browser
+http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧠 Writing New Posts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Add a new `.md` file in `/content/posts/`:
 
-## Learn More
+```bash
+---
+title: "How I Simplified My Finances with Revolut"
+date: "2025-10-30"
+excerpt: "Managing money got easier with Revolut. Here’s how I use it day-to-day."
+---
 
-To learn more about Next.js, take a look at the following resources:
+Your Markdown content here...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Each file automatically appears on the blog homepage.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🌐 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The blog is deployed on **Vercel**.  
+Every push to the `main` branch triggers an automatic redeploy.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To deploy manually:
+
+```bash
+vercel --prod
+```
+
+---
+
+## 🧾 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 💬 Connect
+
+📚 Read more articles on [blog.simplifymylife.app](https://blog.simplifymylife.app)  
+🌎 Explore more tools, coming soon at [simplifymylife.app](https://simplifymylife.app)
