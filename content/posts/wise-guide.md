@@ -105,14 +105,35 @@ Wise is regulated in the regions where it operates and safeguards customer funds
 Wise shines when you need a single account to earn, hold, convert, and spend across currencies without mental math or sticker shock. Pair it with your home-country bank for lending products or long-term savings, and you’ll have a well-rounded global money toolkit.
 
 <div class="cta-card">
-  <div class="cta-card__badge">Referral perk</div>
+  <div class="cta-card__header">
+    <div class="cta-card__icon" aria-hidden="true">
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="#e0f2fe" />
+        <path
+          d="M20 8.5l1.94 6.18h6.5l-5.26 3.82 2 6.18L20 21.05l-5.18 3.63 1.98-6.18-5.28-3.82h6.5L20 8.5z"
+          fill="#2563eb"
+        />
+      </svg>
+    </div>
+    <div class="cta-card__badge">Referral perk</div>
+  </div>
   <div class="cta-card__body">
     <h4>Open a Wise account in minutes</h4>
     <p>Use my referral link to set up your multi-currency account, unlock the first transfer with reduced fees, and see real mid-market rates before you send.</p>
   </div>
   <div class="cta-card__actions">
     <a class="cta-card__button" href="https://wise.com/invite/dic/chetanb1" target="_blank" rel="noopener noreferrer">
-      Try Wise with a fee break
+      <span>Try Wise with a fee break</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M6.75 17.25l9.5-9.5m0 0H9m7.25 0V15"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
     </a>
     <p class="cta-card__note">You’ll get the same transparent pricing that Wise offers everyone—this link simply helps support the blog.</p>
   </div>
