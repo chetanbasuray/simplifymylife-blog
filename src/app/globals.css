@@ -267,6 +267,121 @@ body {
   margin-top: clamp(3.25rem, 4vw, 4.5rem) !important;
 }
 
+.article-content .cta-card {
+  margin-top: clamp(3.5rem, 5vw, 5rem);
+  padding: clamp(2.5rem, 4vw, 3.5rem);
+  border-radius: 2rem;
+  background: linear-gradient(120deg, rgba(14, 165, 233, 0.95), rgba(59, 130, 246, 0.92), rgba(16, 185, 129, 0.92));
+  border: 1px solid rgba(15, 118, 110, 0.35);
+  box-shadow: 0 32px 45px -26px rgba(15, 23, 42, 0.45);
+  color: #f8fafc;
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.75rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.article-content .cta-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.32), transparent 45%),
+    radial-gradient(circle at bottom left, rgba(15, 118, 110, 0.25), transparent 55%);
+  pointer-events: none;
+}
+
+.article-content .cta-card__badge {
+  justify-self: start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.25);
+  color: #f8fafc;
+  position: relative;
+  z-index: 1;
+}
+
+.article-content .cta-card__body {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.article-content .cta-card__body h4 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.65rem, 3vw, 2.1rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: #ffffff;
+}
+
+.article-content .cta-card__body p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(241, 245, 249, 0.95);
+}
+
+.article-content .cta-card__actions {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.article-content .cta-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.5rem;
+  background: #f1f5f9;
+  color: #0f172a;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 18px 26px -22px rgba(15, 23, 42, 0.65);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.article-content .cta-card__button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 32px -24px rgba(15, 23, 42, 0.7);
+  background: #ffffff;
+}
+
+.article-content .cta-card__button::after {
+  content: "→";
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.article-content .cta-card__button:hover::after {
+  transform: translateX(3px);
+}
+
+.article-content .cta-card__note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(248, 250, 252, 0.9);
+}
+
+@media (max-width: 640px) {
+  .article-content .cta-card {
+    border-radius: 1.75rem;
+    padding: 2.25rem;
+  }
+
+  .article-content .cta-card__button {
+    width: 100%;
+  }
+}
+
 @media (max-width: 640px) {
   .article-content h3 {
     font-size: 1.75rem !important;

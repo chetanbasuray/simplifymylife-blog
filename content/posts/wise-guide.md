@@ -104,4 +104,16 @@ Wise is regulated in the regions where it operates and safeguards customer funds
 
 Wise shines when you need a single account to earn, hold, convert, and spend across currencies without mental math or sticker shock. Pair it with your home-country bank for lending products or long-term savings, and you’ll have a well-rounded global money toolkit.
 
-[Open a Wise account (referral link)](https://wise.com/invite/dic/chetanb1)
+<div class="cta-card">
+  <div class="cta-card__badge">Referral perk</div>
+  <div class="cta-card__body">
+    <h4>Open a Wise account in minutes</h4>
+    <p>Use my referral link to set up your multi-currency account, unlock the first transfer with reduced fees, and see real mid-market rates before you send.</p>
+  </div>
+  <div class="cta-card__actions">
+    <a class="cta-card__button" href="https://wise.com/invite/dic/chetanb1" target="_blank" rel="noopener noreferrer">
+      Try Wise with a fee break
+    </a>
+    <p class="cta-card__note">You’ll get the same transparent pricing that Wise offers everyone—this link simply helps support the blog.</p>
+  </div>
+</div>
