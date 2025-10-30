@@ -28,7 +28,7 @@ Managing money across borders used to mean juggling multiple bank accounts, deco
   <footer>— Wise co-founders Kristo Käärmann and Taavet Hinrikus</footer>
 </blockquote>
 
-<section class="grid gap-6 lg:grid-cols-2">
+<section class="grid gap-6 lg:grid-cols-2 full-bleed">
   <figure class="image-card">
     <img src="/images/wise-travel.svg" alt="Illustration of the Wise debit card surrounded by travel essentials" loading="lazy" />
     <figcaption>Illustration credit: Simplify My Life team · <a href="/images/wise-travel.svg" target="_blank" rel="noopener">open image</a></figcaption>
@@ -84,7 +84,7 @@ Wise is regulated in the regions where it operates and safeguards customer funds
 
 ### Who gets the most value?
 
-<section class="grid gap-6 lg:grid-cols-2">
+<section class="grid gap-6 lg:grid-cols-2 full-bleed">
   <div class="persona-card">
     <h4>Frequent flyers &amp; expats</h4>
     <p>Keep travel budgets, tuition payments, and salary transfers in one place without juggling multiple banks.</p>

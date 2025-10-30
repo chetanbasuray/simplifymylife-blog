@@ -46,8 +46,8 @@ export default async function BlogPost({ params }) {
           </span>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
-          <div className="space-y-10">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_320px]">
+          <div className="space-y-12">
             <header className="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white/95 shadow-xl shadow-slate-200/60">
               {data.image && (
                 <div className="relative h-72 w-full overflow-hidden">
@@ -68,7 +68,7 @@ export default async function BlogPost({ params }) {
                 </div>
               )}
 
-              <div className="space-y-6 px-8 pb-8 pt-10 sm:px-10">
+              <div className="space-y-7 px-8 pb-10 pt-10 sm:px-12 sm:pb-12">
                 {!data.image && (
                   <div className="space-y-2 text-center sm:text-left">
                     <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
@@ -107,9 +107,9 @@ export default async function BlogPost({ params }) {
               </div>
             </header>
 
-            <div className="rounded-[2rem] border border-slate-200/80 bg-white/95 p-8 shadow-lg shadow-slate-200/60 sm:p-10">
+            <div className="rounded-[2rem] border border-slate-200/80 bg-white/95 p-8 shadow-lg shadow-slate-200/60 sm:p-12">
               <div
-                className="article-content prose prose-lg max-w-none text-slate-700 prose-headings:font-semibold prose-headings:text-slate-900 prose-headings:tracking-tight prose-h3:mt-16 prose-h3:text-3xl prose-h3:font-serif prose-h3:text-slate-900 prose-h4:mt-10 prose-h4:text-lg prose-p:leading-8 prose-li:leading-7 prose-a:text-blue-600 hover:prose-a:text-blue-700 prose-strong:text-slate-900 prose-blockquote:border-l-0 prose-blockquote:pl-0 prose-figure:my-10"
+                className="article-content article-flow prose prose-lg max-w-none text-slate-700 prose-headings:font-semibold prose-headings:text-slate-900 prose-headings:tracking-tight prose-h4:text-lg prose-p:leading-8 prose-li:leading-7 prose-a:text-blue-600 hover:prose-a:text-blue-700 prose-strong:text-slate-900 prose-blockquote:border-l-0 prose-blockquote:pl-0 prose-figure:my-10"
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
               />
 
@@ -123,7 +123,7 @@ export default async function BlogPost({ params }) {
           </div>
 
           {(data.summary || data.quickFacts) && (
-            <aside className="space-y-6 lg:sticky lg:top-28">
+            <aside className="space-y-7 lg:sticky lg:top-28">
               {data.summary && Array.isArray(data.summary) && data.summary.length > 0 && (
                 <section className="rounded-3xl border border-blue-100/80 bg-blue-50/70 p-6 text-sm text-slate-600 shadow-inner shadow-blue-100">
                   <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600">Takeaways</h2>
