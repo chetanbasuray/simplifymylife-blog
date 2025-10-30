@@ -23,60 +23,75 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col font-sans bg-gradient-to-br from-orange-50 to-yellow-50 text-gray-800">
-        {/* ===== Header ===== */}
-        <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-orange-100 shadow-sm">
-          <nav className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <Image
-                src="/logo-wordmark.svg"
-                alt="Simplify My Life"
-                width={220}
-                height={55}
-                className="h-8 w-auto"
-              />
-            </Link>
+      <body className="min-h-screen bg-[var(--surface-muted)] text-slate-900 antialiased">
+        <div className="relative flex min-h-screen flex-col">
+          <div
+            className="pointer-events-none absolute inset-x-0 top-[-8rem] z-0 mx-auto h-[28rem] max-w-4xl rounded-full bg-gradient-to-br from-blue-100 via-sky-100 to-teal-100 opacity-60 blur-3xl"
+            aria-hidden
+          />
 
-            {/* Navigation */}
-            <div className="flex gap-6 text-sm font-medium text-gray-700">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/about", label: "About" },
-                { href: "/contact", label: "Contact" },
-              ].map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="relative group hover:text-orange-600 transition"
-                >
-                  {link.label}
-                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-400 transition-all duration-300 group-hover:w-full" />
+          <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl">
+            <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 lg:px-6">
+              <Link
+                href="/"
+                className="relative flex items-center gap-2 rounded-full px-3 py-1 transition hover:opacity-90"
+              >
+                <Image
+                  src="/logo-wordmark.svg"
+                  alt="Simplify My Life"
+                  width={220}
+                  height={55}
+                  className="h-7 w-auto"
+                  priority
+                />
+              </Link>
+
+              <div className="flex items-center gap-1 text-sm font-medium text-slate-600">
+                {[{ href: "/", label: "Home" }, { href: "/about", label: "About" }, { href: "/contact", label: "Contact" }].map(
+                  (link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="relative rounded-full px-4 py-2 transition hover:bg-slate-100 hover:text-slate-900"
+                    >
+                      {link.label}
+                    </Link>
+                  ),
+                )}
+              </div>
+            </nav>
+          </header>
+
+          <main className="relative z-10 flex-1">{children}</main>
+
+          <footer className="mt-16 border-t border-slate-200/70 bg-white/70">
+            <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-10 text-center text-sm text-slate-500 lg:px-6">
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="/privacy" className="rounded-full px-3 py-1 transition hover:bg-slate-100 hover:text-slate-900">
+                  Privacy
                 </Link>
-              ))}
+                <Link href="/about" className="rounded-full px-3 py-1 transition hover:bg-slate-100 hover:text-slate-900">
+                  About
+                </Link>
+                <Link href="/contact" className="rounded-full px-3 py-1 transition hover:bg-slate-100 hover:text-slate-900">
+                  Contact
+                </Link>
+              </div>
+
+              <p className="text-xs text-slate-400">
+                © {new Date().getFullYear()} Simplify My Life — Made with ❤️ using{" "}
+                <Link href="https://nextjs.org" className="font-medium text-slate-500 underline hover:text-slate-700">
+                  Next.js
+                </Link>{" "}
+                &{" "}
+                <Link href="https://vercel.com" className="font-medium text-slate-500 underline hover:text-slate-700">
+                  Vercel
+                </Link>
+                .
+              </p>
             </div>
-          </nav>
-        </header>
-
-        {/* ===== Main Content ===== */}
-        <main className="flex-1">{children}</main>
-
-        {/* ===== Footer ===== */}
-        <footer className="bg-gradient-to-r from-orange-50 to-yellow-50 border-t border-orange-100 mt-10">
-          <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col items-center text-center text-sm text-gray-700 space-y-4">
-            <div className="flex flex-wrap justify-center gap-4 text-gray-600 text-sm">
-              <Link href="/privacy" className="hover:text-orange-600">Privacy</Link>
-              <Link href="/about" className="hover:text-orange-600">About</Link>
-              <Link href="/contact" className="hover:text-orange-600">Contact</Link>
-            </div>
-
-            <p className="text-xs text-gray-500">
-              © {new Date().getFullYear()} Simplify My Life — Made with ❤️ using{" "}
-              <Link href="https://nextjs.org" className="underline hover:text-orange-600">Next.js</Link> &{" "}
-              <Link href="https://vercel.com" className="underline hover:text-orange-600">Vercel</Link>.
-            </p>
-          </div>
-        </footer>
+          </footer>
+        </div>
       </body>
     </html>
   );
