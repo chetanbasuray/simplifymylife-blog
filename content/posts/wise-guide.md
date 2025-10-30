@@ -28,19 +28,73 @@ Managing money across borders used to mean juggling multiple bank accounts, deco
   <footer>— Wise co-founders Kristo Käärmann and Taavet Hinrikus</footer>
 </blockquote>
 
-<section class="grid gap-6 lg:grid-cols-2 full-bleed">
-  <figure class="image-card">
-    <img src="/images/wise-travel.svg" alt="Illustration of the Wise debit card surrounded by travel essentials" loading="lazy" />
+<section class="switch-feature full-bleed">
+  <figure class="switch-feature__media">
+    <div class="switch-feature__media-surface">
+      <img src="/images/wise-travel.svg" alt="Illustration of the Wise debit card surrounded by travel essentials" loading="lazy" />
+    </div>
     <figcaption>Illustration credit: Simplify My Life team · <a href="/images/wise-travel.svg" target="_blank" rel="noopener">open image</a></figcaption>
   </figure>
-  <div class="insight-card">
-    <h3>Why people switch to Wise</h3>
-    <p>Wise started as a peer-to-peer money swap for friends frustrated by bank charges. Today it functions as a full multi-currency account with business-ready tools, local bank details, and consumer protections.</p>
-    <ul>
-      <li><strong>Hold & convert</strong> money in 40+ currencies at the real mid-market rate.</li>
-      <li><strong>Send</strong> to 170 countries with fees displayed before you confirm.</li>
-      <li><strong>Spend</strong> like a local with the Wise debit card and virtual card numbers.</li>
-    </ul>
+  <div class="switch-feature__content">
+    <p class="switch-feature__eyebrow">Why people switch to Wise</p>
+    <h3 class="switch-feature__title">Money tools that feel local everywhere</h3>
+    <p>Wise started as a peer-to-peer swap for friends dodging bank fees. Today it’s a full multi-currency account with business-ready controls, local bank details, and a transparent pricing model that keeps you in charge.</p>
+    <div class="switch-feature__highlights">
+      <div class="switch-feature__highlight">
+        <span class="switch-feature__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="switch-hold" x1="0%" x2="100%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#6ee7b7" />
+                <stop offset="100%" stop-color="#22d3ee" />
+              </linearGradient>
+            </defs>
+            <rect x="3" y="7" width="26" height="18" rx="6" fill="url(#switch-hold)" opacity="0.35" />
+            <path d="M25 11H7a2 2 0 00-2 2v7c0 1.1.9 2 2 2h18a2 2 0 002-2v-7a2 2 0 00-2-2zm-7 7h-4a1 1 0 110-2h4a1 1 0 010 2z" fill="#0f172a" opacity="0.75" />
+          </svg>
+        </span>
+        <div>
+          <p class="switch-feature__label">Hold &amp; convert</p>
+          <p>Keep balances in 40+ currencies at the real mid-market rate with no mystery markups.</p>
+        </div>
+      </div>
+      <div class="switch-feature__highlight">
+        <span class="switch-feature__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="switch-send" x1="0%" x2="100%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#93c5fd" />
+                <stop offset="100%" stop-color="#a855f7" />
+              </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="13" fill="url(#switch-send)" opacity="0.35" />
+            <path d="M24 10.5l-5.5 11.5-2.2-4.9-4.9-2.2L24 10.5zM8 21.5l6.4-3 1.3 2.9-5.9.1a1 1 0 01-.8-1.7z" fill="#1e1b4b" opacity="0.75" />
+          </svg>
+        </span>
+        <div>
+          <p class="switch-feature__label">Send worldwide</p>
+          <p>Move money to 170 countries with upfront fees shown before you approve the transfer.</p>
+        </div>
+      </div>
+      <div class="switch-feature__highlight">
+        <span class="switch-feature__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="switch-spend" x1="0%" x2="100%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#fde68a" />
+                <stop offset="100%" stop-color="#f97316" />
+              </linearGradient>
+            </defs>
+            <path d="M7 9a4 4 0 014-4h10a4 4 0 014 4v14a4 4 0 01-4 4H11a4 4 0 01-4-4V9z" fill="url(#switch-spend)" opacity="0.35" />
+            <path d="M20.75 8h-1.5a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5zm-8.5 0h-1a.75.75 0 000 1.5h1a.75.75 0 000-1.5zM16 23.5a2.75 2.75 0 100-5.5 2.75 2.75 0 000 5.5z" fill="#1f2937" opacity="0.75" />
+          </svg>
+        </span>
+        <div>
+          <p class="switch-feature__label">Spend like a local</p>
+          <p>Tap the Wise debit card, add it to mobile wallets, and use virtual numbers for safer shopping.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
