@@ -27,96 +27,130 @@ export default function ContactPage() {
       setStatus("Something went wrong. Please try again.");
     }
 
-    // Hide status after 4 seconds
     setTimeout(() => setStatus(""), 4000);
   };
 
   return (
-    <main className="max-w-3xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold mb-6 text-gray-900">Contact</h1>
+    <div className="relative pb-20">
+      <div
+        className="pointer-events-none absolute inset-x-0 top-[-8rem] z-0 mx-auto h-[24rem] max-w-4xl rounded-full bg-gradient-to-br from-indigo-200/80 via-sky-200/80 to-emerald-200/80 blur-3xl"
+        aria-hidden
+      />
 
-      <p className="text-gray-700 mb-8 leading-relaxed">
-        Have feedback, suggestions, or just want to say hi?  
-        I’d love to hear from you! Use the form below — your email address will
-        remain private, and I’ll get back to you as soon as possible.
-      </p>
-
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-5 border border-gray-200 rounded-2xl p-6 bg-white shadow-sm text-gray-800 relative"
-      >
-        {/* Spam honeypot (hidden) */}
-        <input type="text" name="_gotcha" style={{ display: "none" }} />
-
-        {/* Name field */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your name"
-            value={form.name}
-            onChange={handleChange}
-            required
-            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-400 outline-none placeholder-gray-400 transition"
-          />
-        </div>
-
-        {/* Email field */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            placeholder="your@email.com"
-            value={form.email}
-            onChange={handleChange}
-            required
-            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-400 outline-none placeholder-gray-400 transition"
-          />
-        </div>
-
-        {/* Message field */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Message
-          </label>
-          <textarea
-            name="message"
-            placeholder="Write your message..."
-            value={form.message}
-            onChange={handleChange}
-            required
-            rows="5"
-            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-400 outline-none placeholder-gray-400 transition"
-          ></textarea>
-        </div>
-
-        {/* Submit button */}
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition"
-        >
-          Send Message
-        </button>
-
-        {/* Animated Status Banner */}
-        {status && (
-          <div
-            className={`mt-4 p-3 rounded-lg text-sm font-medium border transition-opacity duration-500 ease-out ${
-              status.includes("✅")
-                ? "bg-green-50 text-green-700 border-green-200 opacity-100 animate-fadeIn"
-                : "bg-red-50 text-red-700 border-red-200 opacity-100 animate-fadeIn"
-            }`}
-          >
-            {status}
+      <main className="relative z-10 mx-auto max-w-4xl px-4 pt-12 sm:px-6 lg:px-0">
+        <section className="rounded-3xl border border-slate-200/70 bg-white/95 p-10 shadow-xl shadow-slate-200/60">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+              Contact
+            </span>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Let’s start a conversation</p>
           </div>
-        )}
-      </form>
+
+          <h1 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
+            Have feedback, a story to share, or a collaboration idea?
+          </h1>
+          <p className="mt-4 text-base leading-relaxed text-slate-600">
+            I’d love to hear from you. Drop a note below — your email stays private, and I reply to every message personally.
+          </p>
+
+          <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-5 rounded-3xl border border-slate-200/70 bg-white p-6 shadow-lg shadow-slate-200/60"
+            >
+              <input type="text" name="_gotcha" style={{ display: "none" }} />
+
+              <div className="space-y-1">
+                <label className="text-sm font-semibold text-slate-600" htmlFor="name">
+                  Name
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 transition focus:border-blue-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-sm font-semibold text-slate-600" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="you@email.com"
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 transition focus:border-blue-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-sm font-semibold text-slate-600" htmlFor="message">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="What’s on your mind?"
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                  rows={6}
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 transition focus:border-blue-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="inline-flex w-full items-center justify-center rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
+              >
+                Send message
+              </button>
+
+              {status && (
+                <div
+                  className={`animate-fadeIn rounded-xl border px-4 py-3 text-sm font-medium transition duration-200 ${
+                    status.includes("✅")
+                      ? "border-emerald-200 bg-emerald-50 text-emerald-700"
+                      : status === "Sending..."
+                        ? "border-blue-200 bg-blue-50 text-blue-700"
+                        : "border-rose-200 bg-rose-50 text-rose-700"
+                  }`}
+                >
+                  {status}
+                </div>
+              )}
+            </form>
+
+            <aside className="rounded-3xl border border-slate-200/70 bg-slate-50/80 p-6 shadow-lg shadow-slate-200/60">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Need a prompt?</h2>
+              <ul className="mt-4 space-y-3 text-sm text-slate-600">
+                {[
+                  "Share a challenge you’re simplifying right now",
+                  "Suggest a topic or tool for the next deep dive",
+                  "Recommend someone doing meaningful work",
+                ].map((item) => (
+                  <li key={item} className="rounded-2xl border border-slate-200 bg-white px-3 py-3 shadow-sm">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 rounded-2xl border border-dashed border-slate-300/80 bg-white px-4 py-4 text-sm text-slate-600">
+                Prefer email? Reach out directly at
+                <span className="ml-1 font-semibold text-blue-600">hello@simplifymylife.blog</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
 
       <style jsx global>{`
         @keyframes fadeIn {
@@ -133,6 +167,6 @@ export default function ContactPage() {
           animation: fadeIn 0.4s ease-in-out;
         }
       `}</style>
-    </main>
+    </div>
   );
 }

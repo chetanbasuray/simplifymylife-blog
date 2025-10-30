@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
+import Link from "next/link";
 import Image from "next/image";
 
 export async function generateStaticParams() {
@@ -20,62 +21,72 @@ export default async function BlogPost({ params }) {
   const htmlContent = marked(content);
 
   return (
-    <article className="prose prose-lg md:prose-xl mx-auto px-4 md:px-0 py-12 text-gray-800 prose-img:rounded-xl prose-img:shadow-sm">
-      {/* Header */}
-      <header className="mb-12 text-center">
-        <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">
-          {data.title}
-        </h1>
-        <p className="text-gray-500 text-sm mb-4">
-          {new Date(data.date).toLocaleDateString("en-US", {
-            month: "short",
-            day: "numeric",
-            year: "numeric",
-          })}{" "}
-          • {data.readingTime || "2 min read"}
-        </p>
-
-        {/* Tags */}
-        {data.tags && (
-          <div className="flex flex-wrap justify-center gap-2 mb-4">
-            {data.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-xs px-3 py-1 bg-orange-100 text-orange-700 rounded-full font-medium"
-              >
-                #{tag}
-              </span>
-            ))}
-          </div>
-        )}
-      </header>
-
-      {/* Featured Image */}
-      {data.image && (
-        <div className="relative w-full h-80 mb-10">
-          <Image
-            src={data.image}
-            alt={data.title}
-            fill
-            className="object-cover rounded-2xl"
-          />
-        </div>
-      )}
-
-      {/* Content */}
+    <div className="relative pb-20">
       <div
-        className="prose prose-lg max-w-none prose-headings:font-semibold prose-a:text-orange-600 hover:prose-a:text-orange-700 prose-strong:text-gray-900 prose-img:rounded-lg"
-        dangerouslySetInnerHTML={{ __html: htmlContent }}
+        className="pointer-events-none absolute inset-x-0 top-[-8rem] z-0 mx-auto h-[26rem] max-w-4xl rounded-full bg-gradient-to-br from-indigo-200/80 via-sky-200/80 to-emerald-200/80 blur-3xl"
+        aria-hidden
       />
 
-      {/* Affiliate Disclaimer */}
-      {data.affiliate && (
-        <p className="mt-10 text-sm italic text-gray-500 border-t border-gray-200 pt-4">
-          Disclaimer: I may earn a small commission via the referral link above
-          at no extra cost to you. Always read fine print and check which
-          countries/features apply.
-        </p>
-      )}
-    </article>
+      <article className="relative z-10 mx-auto max-w-4xl px-4 pt-12 sm:px-6 lg:px-0">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 shadow-sm">
+          <Link href="/" className="flex items-center gap-1 text-slate-500 transition hover:text-blue-600">
+            <span aria-hidden>←</span> Back
+          </Link>
+          <span className="h-1 w-1 rounded-full bg-slate-300" />
+          <span>Article</span>
+        </div>
+
+        <header className="rounded-3xl border border-slate-200/80 bg-white/95 p-8 shadow-xl shadow-slate-200/60">
+          <div className="space-y-6 text-center">
+            <div className="space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
+                {data.category || "Field notes"}
+              </p>
+              <h1 className="text-3xl font-semibold text-slate-900 sm:text-4xl">{data.title}</h1>
+            </div>
+            <p className="text-sm text-slate-500">
+              {new Date(data.date).toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+              })}{" "}
+              • {data.readingTime || "2 min read"}
+            </p>
+            {data.tags && (
+              <div className="flex flex-wrap justify-center gap-2">
+                {data.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-600"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </header>
+
+        {data.image && (
+          <div className="relative mt-10 h-80 overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-lg shadow-slate-200/60">
+            <Image src={data.image} alt={data.title} fill className="object-cover" priority />
+          </div>
+        )}
+
+        <div className="mt-10 rounded-3xl border border-slate-200/80 bg-white/95 p-8 shadow-lg shadow-slate-200/60">
+          <div
+            className="prose prose-lg max-w-none text-slate-700 prose-headings:font-semibold prose-headings:text-slate-900 prose-a:text-blue-600 hover:prose-a:text-blue-700 prose-strong:text-slate-900 prose-blockquote:border-l-blue-200"
+            dangerouslySetInnerHTML={{ __html: htmlContent }}
+          />
+
+          {data.affiliate && (
+            <p className="mt-10 rounded-2xl border border-dashed border-slate-300/70 bg-slate-50/80 p-5 text-sm italic text-slate-500">
+              Disclaimer: I may earn a small commission via the referral link above at no extra cost to you. Always read fine print
+              and check which countries/features apply.
+            </p>
+          )}
+        </div>
+      </article>
+    </div>
   );
 }
