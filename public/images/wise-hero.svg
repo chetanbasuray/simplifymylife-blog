@@ -1,0 +1,50 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hero-bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C3F0FF" />
+      <stop offset="0.45" stop-color="#E3EAFE" />
+      <stop offset="1" stop-color="#C6F7E2" />
+    </linearGradient>
+    <linearGradient id="card-gradient" x1="0" y1="0" x2="440" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0EA5E9" />
+      <stop offset="1" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="phone-gradient" x1="0" y1="0" x2="300" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F172A" />
+      <stop offset="1" stop-color="#1E3A8A" />
+    </linearGradient>
+    <filter id="card-shadow" x="-40" y="-40" width="520" height="340" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="30" stdDeviation="35" flood-color="#0F172A" flood-opacity="0.15" />
+    </filter>
+    <filter id="phone-shadow" x="0" y="0" width="360" height="680" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="40" stdDeviation="45" flood-color="#0F172A" flood-opacity="0.18" />
+    </filter>
+  </defs>
+  <rect width="1600" height="900" rx="60" fill="url(#hero-bg)" />
+  <g opacity="0.3">
+    <circle cx="300" cy="220" r="160" fill="#38BDF8" />
+    <circle cx="1450" cy="650" r="210" fill="#22D3EE" />
+    <circle cx="1220" cy="200" r="140" fill="#38BDF8" />
+    <circle cx="480" cy="720" r="190" fill="#86EFAC" />
+    <circle cx="900" cy="440" r="220" fill="#A5B4FC" />
+  </g>
+  <g transform="translate(520 180)" filter="url(#phone-shadow)">
+    <rect x="40" y="0" width="260" height="540" rx="52" fill="url(#phone-gradient)" />
+    <rect x="72" y="52" width="196" height="120" rx="18" fill="#1E40AF" opacity="0.8" />
+    <rect x="72" y="202" width="196" height="72" rx="18" fill="#1D4ED8" opacity="0.85" />
+    <rect x="72" y="302" width="196" height="48" rx="18" fill="#0EA5E9" opacity="0.7" />
+    <rect x="72" y="370" width="196" height="48" rx="18" fill="#22D3EE" opacity="0.6" />
+    <rect x="72" y="438" width="196" height="48" rx="18" fill="#F8FAFC" opacity="0.15" />
+    <circle cx="170" cy="492" r="14" fill="#F1F5F9" opacity="0.4" />
+  </g>
+  <g transform="translate(840 320)" filter="url(#card-shadow)">
+    <rect width="440" height="260" rx="40" fill="url(#card-gradient)" />
+    <rect x="40" y="48" width="180" height="28" rx="14" fill="#38BDF8" opacity="0.7" />
+    <rect x="40" y="104" width="280" height="28" rx="14" fill="#F8FAFC" opacity="0.35" />
+    <rect x="40" y="160" width="320" height="28" rx="14" fill="#F8FAFC" opacity="0.2" />
+    <circle cx="360" cy="88" r="32" fill="#F8FAFC" opacity="0.35" />
+    <circle cx="360" cy="164" r="32" fill="#F8FAFC" opacity="0.2" />
+  </g>
+  <text x="200" y="720" fill="#0F172A" font-family="'Inter', 'Segoe UI', sans-serif" font-size="48" font-weight="600">Wise makes global spending feel local.</text>
+  <text x="200" y="776" fill="#1E293B" font-family="'Inter', 'Segoe UI', sans-serif" font-size="28" opacity="0.8">Transparent exchange, smart controls, and stress-free travel money.</text>
+</svg>

@@ -109,7 +109,7 @@ export default async function BlogPost({ params }) {
 
             <div className="rounded-[2rem] border border-slate-200/80 bg-white/95 p-8 shadow-lg shadow-slate-200/60 sm:p-10">
               <div
-                className="prose prose-lg max-w-none text-slate-700 prose-headings:font-semibold prose-headings:text-slate-900 prose-a:text-blue-600 hover:prose-a:text-blue-700 prose-strong:text-slate-900 prose-blockquote:border-l-blue-200"
+                className="article-content prose prose-lg max-w-none text-slate-700 prose-headings:font-semibold prose-headings:text-slate-900 prose-headings:tracking-tight prose-h3:mt-16 prose-h3:text-3xl prose-h3:font-serif prose-h3:text-slate-900 prose-h4:mt-10 prose-h4:text-lg prose-p:leading-8 prose-li:leading-7 prose-a:text-blue-600 hover:prose-a:text-blue-700 prose-strong:text-slate-900 prose-blockquote:border-l-0 prose-blockquote:pl-0 prose-figure:my-10"
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
               />
 
