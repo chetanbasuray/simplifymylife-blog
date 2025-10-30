@@ -143,9 +143,13 @@ export default function ContactPage() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 rounded-2xl border border-dashed border-slate-300/80 bg-white px-4 py-4 text-sm text-slate-600">
-                Prefer email? Reach out directly at
-                <span className="ml-1 font-semibold text-blue-600">hello@simplifymylife.blog</span>
+              <div className="mt-6 space-y-3 text-sm text-slate-600">
+                <div className="rounded-2xl border border-dashed border-slate-300/80 bg-white px-4 py-4">
+                  Messages land directly in my inbox, and I typically respond within two business days.
+                </div>
+                <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4">
+                  Tip: include relevant links or timelines so we can move quickly once I reply.
+                </div>
               </div>
             </aside>
           </div>
