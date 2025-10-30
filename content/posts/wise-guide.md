@@ -67,12 +67,54 @@ Wise is regulated in the regions where it operates and safeguards customer funds
   <figcaption>Illustration credit: Simplify My Life team · <a href="/images/wise-security.svg" target="_blank" rel="noopener">open image</a></figcaption>
 </figure>
 
-<div class="insight-card insight-card--neutral">
+<div class="insight-card insight-card--neutral insight-card--stats">
   <h4>Why the numbers make sense</h4>
-  <ul>
-    <li><strong>Transparent pricing:</strong> Fees are itemized before you hit send—no hidden markups in the exchange rate.</li>
-    <li><strong>Speedy settlement:</strong> In popular corridors like USD ⇄ EUR, transfers can arrive within minutes.</li>
-    <li><strong>Extra controls:</strong> Add an approval step for large payouts so nothing leaves your account unexpectedly.</li>
+  <ul class="insight-points">
+    <li>
+      <span class="insight-points__icon" aria-hidden="true">
+        <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="13" fill="#dbeafe" opacity="0.6" />
+          <path
+            d="M19.8 10.2l-6.25 6.25-3.35-3.35a1 1 0 00-1.42 1.42l4.06 4.06a1 1 0 001.42 0l6.96-6.96a1 1 0 10-1.42-1.42z"
+            fill="#2563eb"
+          />
+        </svg>
+      </span>
+      <div class="insight-points__copy">
+        <p class="insight-points__label">Transparent pricing</p>
+        <p>Fees are itemized before you hit send—no hidden markups in the exchange rate.</p>
+      </div>
+    </li>
+    <li>
+      <span class="insight-points__icon" aria-hidden="true">
+        <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="13" fill="#dbeafe" opacity="0.6" />
+          <path
+            d="M19.8 10.2l-6.25 6.25-3.35-3.35a1 1 0 00-1.42 1.42l4.06 4.06a1 1 0 001.42 0l6.96-6.96a1 1 0 10-1.42-1.42z"
+            fill="#2563eb"
+          />
+        </svg>
+      </span>
+      <div class="insight-points__copy">
+        <p class="insight-points__label">Speedy settlement</p>
+        <p>In popular corridors like USD ⇄ EUR, transfers can arrive within minutes.</p>
+      </div>
+    </li>
+    <li>
+      <span class="insight-points__icon" aria-hidden="true">
+        <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="13" fill="#dbeafe" opacity="0.6" />
+          <path
+            d="M19.8 10.2l-6.25 6.25-3.35-3.35a1 1 0 00-1.42 1.42l4.06 4.06a1 1 0 001.42 0l6.96-6.96a1 1 0 10-1.42-1.42z"
+            fill="#2563eb"
+          />
+        </svg>
+      </span>
+      <div class="insight-points__copy">
+        <p class="insight-points__label">Extra controls</p>
+        <p>Add an approval step for large payouts so nothing leaves your account unexpectedly.</p>
+      </div>
+    </li>
   </ul>
 </div>
 
