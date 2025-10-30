@@ -218,7 +218,7 @@ Wise shines when you need a single account to earn, hold, convert, and spend acr
     <p>Use my referral link to set up your multi-currency account, unlock the first transfer with reduced fees, and see real mid-market rates before you send.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://wise.com/invite/dic/chetanb1" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/go/wise" target="_blank" rel="noopener noreferrer">
       <span>Try Wise with a fee break</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path
