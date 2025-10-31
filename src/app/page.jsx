@@ -3,6 +3,9 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 
+import DailyResetChecklist from "@/components/DailyResetChecklist";
+import NewsletterSignup from "@/components/NewsletterSignup";
+
 function parseDate(value) {
   const timestamp = Date.parse(value);
   return Number.isNaN(timestamp) ? 0 : timestamp;
@@ -38,6 +41,7 @@ export default async function HomePage({ searchParams }) {
         tags: data.tags || [],
         excerpt: data.excerpt || "",
         readingTime: data.readingTime || "",
+        guestSubmission: Boolean(data.guestSubmission),
       };
     })
     .sort((a, b) => parseDate(b.date) - parseDate(a.date));
@@ -46,7 +50,8 @@ export default async function HomePage({ searchParams }) {
     a.localeCompare(b),
   );
 
-  const tagParam = searchParams?.tag;
+  const resolvedSearchParams = await searchParams;
+  const tagParam = resolvedSearchParams?.tag;
   const activeTag = Array.isArray(tagParam) ? tagParam[0] : tagParam;
   const normalizedTag = activeTag ? decodeURIComponent(activeTag) : "";
 
@@ -56,6 +61,15 @@ export default async function HomePage({ searchParams }) {
 
   const featuredPost = filteredPosts[0] ?? posts[0] ?? null;
   const quickReads = posts.slice(0, 4);
+  const toolkitPosts = posts
+    .filter((post) => post.tags?.some((tag) => tag.toLowerCase() === "toolkit"))
+    .sort((a, b) => {
+      if (a.guestSubmission === b.guestSubmission) {
+        return parseDate(b.date) - parseDate(a.date);
+      }
+
+      return a.guestSubmission ? -1 : 1;
+    });
 
   return (
     <div className="relative pb-20">
@@ -65,29 +79,35 @@ export default async function HomePage({ searchParams }) {
       />
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 pt-12 sm:px-6 lg:px-8">
-        <section className="grid gap-6 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
-          <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 p-10 shadow-xl shadow-slate-200/60">
-            <div className="absolute inset-x-8 top-10 h-32 rounded-3xl bg-gradient-to-r from-blue-100 via-indigo-100 to-sky-100 blur-3xl" />
-            <div className="relative flex h-full flex-col justify-between gap-12">
-              <div className="space-y-5">
-                <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-blue-600">
-                  mindful systems
+        <section className="grid gap-5 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 px-8 py-12 shadow-xl shadow-slate-200/60 sm:px-12">
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-100/80 via-white to-indigo-100/70" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.25)_0%,_rgba(59,130,246,0.05)_45%,_transparent_70%)]" />
+              <div className="absolute inset-0 opacity-40 mix-blend-multiply">
+                <div className="absolute inset-x-8 top-6 h-48 rounded-full bg-gradient-to-r from-sky-200/80 via-transparent to-indigo-200/70 blur-3xl" />
+              </div>
+            </div>
+            <div className="relative flex h-full flex-col items-start gap-8 text-left">
+              <div className="space-y-4 sm:space-y-5">
+                <span className="inline-flex items-center gap-2 self-start rounded-full bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-blue-700 shadow-sm ring-1 ring-white/60">
+                  simplify my life
                 </span>
-                <h1 className="text-4xl font-semibold text-slate-900 sm:text-[2.8rem]">
+                <h1 className="max-w-2xl text-4xl font-semibold text-slate-900 sm:text-[3.2rem] sm:leading-[1.05]">
                   Design a calmer, smarter rhythm for everyday life.
                 </h1>
-                <p className="max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
+                <p className="max-w-2xl text-base leading-relaxed text-slate-600 sm:text-xl sm:leading-relaxed">
                   Curated guidance on habits, digital tools, and thoughtful routines so you can focus on what matters most.
                 </p>
               </div>
 
               {featuredPost && (
-                <div className="flex flex-col gap-4 rounded-2xl bg-slate-900/95 p-6 text-slate-100 shadow-lg shadow-slate-900/20 sm:flex-row sm:items-center sm:justify-between">
-                  <div className="space-y-1">
-                    <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-300">
+                <div className="w-full max-w-xl rounded-2xl bg-slate-900/95 p-6 text-left text-slate-100 shadow-lg ring-1 ring-white/5">
+                  <div className="space-y-2">
+                    <p className="text-xs font-medium uppercase tracking-[0.25em] text-slate-300">
                       Featured article
                     </p>
-                    <p className="text-lg font-semibold leading-snug text-white">
+                    <p className="text-xl font-semibold leading-snug text-white">
                       {featuredPost.title}
                     </p>
                     <p className="text-xs text-slate-300">
@@ -96,7 +116,7 @@ export default async function HomePage({ searchParams }) {
                   </div>
                   <Link
                     href={`/${featuredPost.slug}`}
-                    className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100"
+                    className="mt-5 inline-flex w-auto items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100"
                   >
                     Read now
                   </Link>
@@ -105,52 +125,79 @@ export default async function HomePage({ searchParams }) {
             </div>
           </div>
 
-          <div className="grid gap-6">
-            <div className="rounded-3xl border border-slate-200/70 bg-white/95 p-6 shadow-md shadow-slate-200/50">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Daily reset</h2>
-              <p className="mt-2 text-base text-slate-600">
-                A lightweight checklist to recentre your focus in under five minutes.
-              </p>
-              <ul className="mt-5 space-y-3 text-sm text-slate-600">
-                {["Brain dump tasks", "Review calendar commitments", "Set one highlight", "Tidy your digital desktop"].map(
-                  (item) => (
-                    <li key={item} className="flex items-start gap-3 rounded-2xl bg-slate-50/90 px-4 py-3">
-                      <span className="mt-1 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full border border-slate-300 bg-white text-[10px] font-semibold text-slate-500">
-                        ✓
-                      </span>
-                      <span className="leading-snug">{item}</span>
-                    </li>
-                  ),
-                )}
-              </ul>
-            </div>
+          <div className="grid gap-5">
+            <DailyResetChecklist />
 
-            <div className="rounded-3xl border border-slate-200/70 bg-white/95 p-6 shadow-md shadow-slate-200/50">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Toolkit spotlight</h2>
-              <div className="mt-4 space-y-3 text-sm text-slate-600">
-                <p className="rounded-2xl bg-blue-50/70 px-4 py-3 leading-relaxed text-blue-900">
-                  “Schedule a recurring <strong>weekly review</strong> in your calendar and treat it like a meeting with yourself. Five
-                  consistent sessions are more powerful than one perfect overhaul.”
-                </p>
-                <div className="rounded-2xl border border-dashed border-slate-200 px-4 py-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Apps on rotation</p>
-                  <ul className="mt-3 space-y-2 text-sm">
-                    {["Notion for project hubs", "Things for capture", "Readwise for notes", "Cron for time blocking"].map((tool) => (
-                      <li key={tool} className="flex items-center justify-between rounded-xl px-3 py-2 hover:bg-slate-50/80">
-                        <span>{tool}</span>
-                        <span className="text-xs font-medium text-slate-400">personal stack</span>
+            {toolkitPosts.length > 0 && (
+              <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-gradient-to-br from-white via-white to-blue-50/60 p-6 shadow-md shadow-slate-200/50">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(191,219,254,0.45)_0%,_transparent_65%)]" aria-hidden />
+                <div className="relative">
+                  <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Toolkit spotlight</h2>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                    Articles focused on systems and tools to organise the everyday. Guest submissions from partner teams are highlighted.
+                  </p>
+                  <ul className="mt-5 space-y-3">
+                    {toolkitPosts.map((post) => (
+                      <li key={post.slug} className="relative">
+                        <div
+                          className={`rounded-3xl ${
+                            post.guestSubmission ? "bg-gradient-to-r from-amber-300 via-pink-300 to-rose-400 p-[2px] shadow-sm" : ""
+                          }`}
+                        >
+                          <div
+                            className={`relative flex items-start justify-between gap-4 rounded-2xl border p-4 transition hover:-translate-y-[1px] hover:bg-white hover:shadow-sm ${
+                              post.guestSubmission
+                                ? "border-transparent bg-white/95"
+                                : "border-slate-200/70 bg-white/80"
+                            }`}
+                          >
+                            <div className="space-y-2">
+                              <Link
+                                href={`/${post.slug}`}
+                                className="block text-base font-semibold leading-snug text-slate-900 transition hover:text-blue-600"
+                              >
+                                {post.title}
+                              </Link>
+                              {post.excerpt && (
+                                <p className="text-sm leading-relaxed text-slate-600">
+                                  {post.excerpt}
+                                </p>
+                              )}
+                              <div className="flex flex-wrap items-center gap-3 text-xs font-medium text-slate-400">
+                                <span>{post.date !== "Unknown" ? formatDate(post.date) : "New"}</span>
+                                {post.readingTime && post.readingTime.length > 0 && <span>{post.readingTime}</span>}
+                                {post.guestSubmission && (
+                                  <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 text-amber-700">
+                                    <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-amber-400 to-pink-400" />
+                                    Guest spotlight
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                            <Link
+                              href={`/${post.slug}`}
+                              className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full border border-slate-200/70 text-slate-400 transition hover:border-blue-200 hover:text-blue-600"
+                              aria-label={`Read ${post.title}`}
+                            >
+                              →
+                            </Link>
+                          </div>
+                        </div>
                       </li>
                     ))}
                   </ul>
+                  <p className="mt-4 text-xs text-slate-400">
+                    Entries live entirely on this site. To feature your toolkit, reach out for contributor guidelines.
+                  </p>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </section>
 
-        <section className="mt-14 grid gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
-          <div className="space-y-6">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <section className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
+          <div className="space-y-6 text-left">
+            <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-start sm:gap-6">
               <div>
                 <h2 className="text-2xl font-semibold text-slate-900">Latest writing</h2>
                 <p className="text-sm text-slate-500">
@@ -264,36 +311,10 @@ export default async function HomePage({ searchParams }) {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-slate-200/70 bg-gradient-to-br from-white via-white to-blue-50/60 p-6 shadow-md shadow-slate-200/50">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Stay in the loop</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                Receive one thoughtful summary each Sunday — no noise, just one practical insight to try during the week.
-              </p>
-              <form
-                className="mt-5 flex flex-col gap-3"
-                action="https://formspree.io/f/xldobqpa"
-                method="POST"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="you@example.com"
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
-                />
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
-                >
-                  Join the Sunday note
-                </button>
-              </form>
-              <p className="mt-3 text-xs text-slate-400">No spam — unsubscribe anytime.</p>
-            </div>
+            <NewsletterSignup />
           </aside>
         </section>
+
       </div>
     </div>
   );

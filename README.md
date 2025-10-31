@@ -53,6 +53,23 @@ http://localhost:3000
 
 ---
 
+## ✉️ Newsletter setup
+
+The homepage now connects to [Buttondown](https://buttondown.email/), which offers a generous free tier and optional paid upgrades once your audience grows. To enable sign-ups:
+
+1. Create a Buttondown account and generate an API token from **Settings → API**.
+2. Copy `.env.local.example` to `.env.local` (or create the file) and add:
+
+   ```bash
+   BUTTONDOWN_API_KEY=your_token_here
+   ```
+
+3. Restart the development server so Next.js can load the new environment variable.
+
+When the API key is present, the “Sunday Note” form on the homepage will send subscribers directly to Buttondown. If the key is missing, the UI will inform visitors that the newsletter is temporarily unavailable.
+
+---
+
 ## 🧠 Writing New Posts
 
 Add a new `.md` file in `/content/posts/`:
