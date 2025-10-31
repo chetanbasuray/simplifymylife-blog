@@ -1,0 +1,16 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="freeHeroBg" x1="0" y1="0" x2="640" y2="360">
+      <stop stop-color="#e0f2fe" />
+      <stop offset="1" stop-color="#eef2ff" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#freeHeroBg)" />
+  <rect x="96" y="92" width="448" height="192" rx="26" fill="#ffffff" opacity="0.92" />
+  <rect x="140" y="136" width="180" height="20" rx="10" fill="#0ea5e9" />
+  <rect x="140" y="172" width="280" height="16" rx="8" fill="#bae6fd" />
+  <rect x="140" y="204" width="240" height="16" rx="8" fill="#7dd3fc" />
+  <rect x="140" y="236" width="200" height="16" rx="8" fill="#38bdf8" />
+  <circle cx="468" cy="188" r="58" fill="#0ea5e9" opacity="0.9" />
+  <path d="M444 188l18 18 30-44" stroke="#f0f9ff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

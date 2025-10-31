@@ -1,0 +1,20 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="freeOffersBg" x1="0" y1="0" x2="640" y2="360">
+      <stop stop-color="#eef2ff" />
+      <stop offset="1" stop-color="#e0f2fe" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#freeOffersBg)" />
+  <rect x="128" y="80" width="384" height="216" rx="28" fill="#ffffff" opacity="0.92" />
+  <text x="164" y="128" font-family="'Inter', sans-serif" font-size="20" fill="#1d4ed8">Fastest offers</text>
+  <rect x="164" y="148" width="256" height="18" rx="9" fill="#38bdf8" />
+  <rect x="164" y="180" width="288" height="18" rx="9" fill="#60a5fa" />
+  <rect x="164" y="212" width="232" height="18" rx="9" fill="#93c5fd" />
+  <rect x="164" y="244" width="208" height="18" rx="9" fill="#2563eb" />
+  <circle cx="420" cy="157" r="16" fill="#38bdf8" />
+  <circle cx="420" cy="189" r="16" fill="#60a5fa" />
+  <circle cx="420" cy="221" r="16" fill="#93c5fd" />
+  <circle cx="420" cy="253" r="16" fill="#2563eb" />
+  <path d="M412 157l5 5 9-12" stroke="#eff6ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

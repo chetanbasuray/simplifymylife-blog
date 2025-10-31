@@ -1,0 +1,18 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="earnMissionBg" x1="0" y1="0" x2="640" y2="360">
+      <stop stop-color="#fef9c3" />
+      <stop offset="1" stop-color="#fffbeb" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#earnMissionBg)" />
+  <rect x="120" y="88" width="400" height="200" rx="28" fill="#ffffff" opacity="0.92" />
+  <text x="156" y="140" font-family="'Inter', sans-serif" font-size="20" fill="#b45309">Daily missions</text>
+  <rect x="156" y="156" width="292" height="18" rx="9" fill="#facc15" opacity="0.7" />
+  <rect x="156" y="188" width="260" height="18" rx="9" fill="#fb923c" opacity="0.7" />
+  <rect x="156" y="220" width="228" height="18" rx="9" fill="#f97316" opacity="0.7" />
+  <circle cx="436" cy="165" r="18" fill="#f97316" />
+  <path d="M428 165l6 6 10-14" stroke="#fff7ed" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="436" cy="197" r="18" fill="#facc15" />
+  <circle cx="436" cy="229" r="18" fill="#fb923c" />
+</svg>
