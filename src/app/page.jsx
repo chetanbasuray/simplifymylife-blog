@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import Link from "next/link";
 
 import DailyResetChecklist from "@/components/DailyResetChecklist";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 function parseDate(value) {
   const timestamp = Date.parse(value);
@@ -310,34 +311,7 @@ export default async function HomePage({ searchParams }) {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-slate-200/70 bg-gradient-to-br from-white via-white to-blue-50/60 p-6 shadow-md shadow-slate-200/50">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Stay in the loop</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                Receive one thoughtful summary each Sunday — no noise, just one practical insight to try during the week.
-              </p>
-              <form
-                className="mt-5 flex flex-col gap-3"
-                action="https://formspree.io/f/xldobqpa"
-                method="POST"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="you@example.com"
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
-                />
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
-                >
-                  Join the Sunday note
-                </button>
-              </form>
-              <p className="mt-3 text-xs text-slate-400">No spam — unsubscribe anytime.</p>
-            </div>
+            <NewsletterSignup />
           </aside>
         </section>
 
