@@ -68,8 +68,8 @@ export default async function HomePage({ searchParams }) {
         <section className="grid gap-5 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
           <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 p-8 shadow-xl shadow-slate-200/60">
             <div className="absolute inset-x-8 top-10 h-32 rounded-3xl bg-gradient-to-r from-blue-100 via-indigo-100 to-sky-100 blur-3xl" />
-            <div className="relative flex h-full flex-col justify-between gap-8">
-              <div className="space-y-4">
+            <div className="relative flex h-full flex-col gap-6">
+              <div className="space-y-3">
                 <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-blue-600">
                   simplify my life
                 </span>
@@ -79,6 +79,17 @@ export default async function HomePage({ searchParams }) {
                 <p className="max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
                   Curated guidance on habits, digital tools, and thoughtful routines so you can focus on what matters most.
                 </p>
+              </div>
+
+              <div className="flex flex-wrap gap-3 text-xs font-semibold text-slate-500 sm:text-sm">
+                {["Intentional habits", "Mindful tech", "Clear priorities"].map((pill) => (
+                  <span
+                    key={pill}
+                    className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-1 uppercase tracking-[0.3em] text-slate-500"
+                  >
+                    {pill}
+                  </span>
+                ))}
               </div>
 
               {featuredPost && (
