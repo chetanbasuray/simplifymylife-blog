@@ -1,0 +1,16 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fiveProgressBg" x1="0" y1="0" x2="640" y2="360">
+      <stop stop-color="#dbeafe" />
+      <stop offset="1" stop-color="#eff6ff" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#fiveProgressBg)" />
+  <rect x="120" y="104" width="400" height="152" rx="24" fill="#ffffff" opacity="0.92" />
+  <rect x="156" y="148" width="332" height="20" rx="10" fill="#bfdbfe" />
+  <rect x="156" y="148" width="256" height="20" rx="10" fill="#2563eb" />
+  <circle cx="412" cy="158" r="18" fill="#1d4ed8" />
+  <path d="M404 158l6 6 12-16" stroke="#eff6ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="156" y="128" font-family="'Inter', sans-serif" font-size="20" fill="#1e3a8a">Daily streak</text>
+  <text x="156" y="208" font-family="'Inter', sans-serif" font-size="16" fill="#1d4ed8">3 boosters unlocked</text>
+</svg>

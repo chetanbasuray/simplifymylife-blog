@@ -1,0 +1,18 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="respondentDashBg" x1="0" y1="0" x2="640" y2="360">
+      <stop stop-color="#f0fdf4" />
+      <stop offset="1" stop-color="#dcfce7" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#respondentDashBg)" />
+  <rect x="80" y="72" width="480" height="216" rx="24" fill="#ffffff" opacity="0.9" />
+  <rect x="112" y="112" width="180" height="20" rx="10" fill="#86efac" />
+  <rect x="112" y="148" width="320" height="16" rx="8" fill="#bbf7d0" />
+  <rect x="112" y="180" width="256" height="16" rx="8" fill="#a7f3d0" />
+  <rect x="112" y="212" width="200" height="16" rx="8" fill="#6ee7b7" />
+  <circle cx="476" cy="140" r="36" fill="#10b981" opacity="0.9" />
+  <path d="M460 140l12 12 20-28" stroke="#ecfdf5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="396" y="208" width="120" height="48" rx="16" fill="#10b981" opacity="0.95" />
+  <text x="456" y="238" text-anchor="middle" font-family="'Inter', sans-serif" font-size="18" fill="white">Scheduled</text>
+</svg>

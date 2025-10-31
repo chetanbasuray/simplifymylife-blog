@@ -6,9 +6,25 @@ import Link from "next/link";
 import DailyResetChecklist from "@/components/DailyResetChecklist";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
+export const dynamic = "force-dynamic";
+
 function parseDate(value) {
+  if (!value) {
+    return null;
+  }
+
   const timestamp = Date.parse(value);
-  return Number.isNaN(timestamp) ? 0 : timestamp;
+  return Number.isNaN(timestamp) ? null : timestamp;
+}
+
+function isPublished(dateString, referenceTime = Date.now()) {
+  const timestamp = parseDate(dateString);
+
+  if (timestamp === null) {
+    return true;
+  }
+
+  return timestamp <= referenceTime;
 }
 
 function formatDate(dateString) {
@@ -34,19 +50,30 @@ export default async function HomePage({ searchParams }) {
       const fileContent = fs.readFileSync(filePath, "utf8");
       const { data } = matter(fileContent);
 
+      const generalTags = Array.isArray(data.tags) ? data.tags : [];
+      const countryTags = Array.isArray(data.countryTags) ? data.countryTags : [];
+      const combinedTags = Array.from(new Set([...generalTags, ...countryTags]));
+
       return {
         slug: filename.replace(/\.md$/, ""),
         title: data.title || "Untitled",
         date: data.date || "Unknown",
-        tags: data.tags || [],
+        tags: combinedTags,
+        displayTags: generalTags,
+        countryTags,
         excerpt: data.excerpt || "",
         readingTime: data.readingTime || "",
         guestSubmission: Boolean(data.guestSubmission),
       };
     })
-    .sort((a, b) => parseDate(b.date) - parseDate(a.date));
+    .filter((post) => isPublished(post.date))
+    .sort((a, b) => {
+      const aTime = parseDate(a.date) ?? 0;
+      const bTime = parseDate(b.date) ?? 0;
+      return bTime - aTime;
+    });
 
-  const allTags = Array.from(new Set(posts.flatMap((p) => p.tags))).sort((a, b) =>
+  const allTags = Array.from(new Set(posts.flatMap((p) => p.displayTags || []))).sort((a, b) =>
     a.localeCompare(b),
   );
 
@@ -58,6 +85,13 @@ export default async function HomePage({ searchParams }) {
   const filteredPosts = normalizedTag
     ? posts.filter((post) => post.tags?.some((tag) => tag.toLowerCase() === normalizedTag.toLowerCase()))
     : posts;
+
+  const normalizedTagLower = normalizedTag.toLowerCase();
+  const browseTags = allTags.some((tag) => tag.toLowerCase() === normalizedTagLower)
+    ? allTags
+    : normalizedTag
+    ? [...allTags, normalizedTag]
+    : allTags;
 
   const featuredPost = filteredPosts[0] ?? posts[0] ?? null;
   const quickReads = posts.slice(0, 4);
@@ -216,51 +250,66 @@ export default async function HomePage({ searchParams }) {
 
             {filteredPosts.length > 0 ? (
               <div className="space-y-6">
-                {filteredPosts.map((post) => (
-                  <article
-                    key={post.slug}
-                    className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-lg shadow-slate-200/60 transition hover:-translate-y-1 hover:shadow-xl"
-                  >
-                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                      <div className="space-y-3">
-                        <Link href={`/${post.slug}`} className="block text-2xl font-semibold leading-snug text-slate-900 group-hover:text-blue-600">
-                          {post.title}
-                        </Link>
-                        <p className="text-sm text-slate-500">
-                          {post.date !== "Unknown" ? formatDate(post.date) : "New"}
-                          {post.readingTime && post.readingTime.length > 0 && (
-                            <span className="ml-2">• {post.readingTime}</span>
+                {filteredPosts.map((post) => {
+                  const tagsToDisplay = [...(post.displayTags || [])];
+                  if (
+                    normalizedTag &&
+                    post.tags?.some(
+                      (tag) => tag.toLowerCase() === normalizedTagLower,
+                    ) &&
+                    !tagsToDisplay.some(
+                      (tag) => tag.toLowerCase() === normalizedTagLower,
+                    )
+                  ) {
+                    tagsToDisplay.push(normalizedTag);
+                  }
+
+                  return (
+                    <article
+                      key={post.slug}
+                      className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-lg shadow-slate-200/60 transition hover:-translate-y-1 hover:shadow-xl"
+                    >
+                      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                        <div className="space-y-3">
+                          <Link href={`/${post.slug}`} className="block text-2xl font-semibold leading-snug text-slate-900 group-hover:text-blue-600">
+                            {post.title}
+                          </Link>
+                          <p className="text-sm text-slate-500">
+                            {post.date !== "Unknown" ? formatDate(post.date) : "New"}
+                            {post.readingTime && post.readingTime.length > 0 && (
+                              <span className="ml-2">• {post.readingTime}</span>
+                            )}
+                          </p>
+                          {tagsToDisplay.length > 0 && (
+                            <div className="flex flex-wrap gap-2">
+                              {tagsToDisplay.map((tag) => (
+                                <Link
+                                  key={tag}
+                                  href={`/?tag=${encodeURIComponent(tag)}`}
+                                  className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold transition ${
+                                    tag.toLowerCase() === normalizedTag.toLowerCase()
+                                      ? "border-blue-500 bg-blue-50 text-blue-700"
+                                      : "border-slate-200 bg-slate-50 text-slate-600 hover:border-blue-200 hover:text-blue-700"
+                                  }`}
+                                >
+                                  #{tag}
+                                </Link>
+                              ))}
+                            </div>
                           )}
-                        </p>
-                        {post.tags && post.tags.length > 0 && (
-                          <div className="flex flex-wrap gap-2">
-                            {post.tags.map((tag) => (
-                              <Link
-                                key={tag}
-                                href={`/?tag=${encodeURIComponent(tag)}`}
-                                className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold transition ${
-                                  tag.toLowerCase() === normalizedTag.toLowerCase()
-                                    ? "border-blue-500 bg-blue-50 text-blue-700"
-                                    : "border-slate-200 bg-slate-50 text-slate-600 hover:border-blue-200 hover:text-blue-700"
-                                }`}
-                              >
-                                #{tag}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                        {post.excerpt && <p className="text-sm leading-relaxed text-slate-600">{post.excerpt}</p>}
+                          {post.excerpt && <p className="text-sm leading-relaxed text-slate-600">{post.excerpt}</p>}
+                        </div>
+                        <Link
+                          href={`/${post.slug}`}
+                          className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full border border-slate-200 text-slate-400 transition hover:border-blue-200 hover:text-blue-600"
+                          aria-label={`Read ${post.title}`}
+                        >
+                          →
+                        </Link>
                       </div>
-                      <Link
-                        href={`/${post.slug}`}
-                        className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full border border-slate-200 text-slate-400 transition hover:border-blue-200 hover:text-blue-600"
-                        aria-label={`Read ${post.title}`}
-                      >
-                        →
-                      </Link>
-                    </div>
-                  </article>
-                ))}
+                    </article>
+                  );
+                })}
               </div>
             ) : (
               <div className="rounded-3xl border border-dashed border-slate-300/70 bg-white/70 p-10 text-center text-slate-500">
@@ -273,8 +322,8 @@ export default async function HomePage({ searchParams }) {
             <div className="rounded-3xl border border-slate-200/70 bg-white/95 p-6 shadow-md shadow-slate-200/60">
               <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Browse by topic</h3>
               <div className="mt-4 flex flex-wrap gap-2">
-                {allTags.length > 0 ? (
-                  allTags.map((tag) => (
+                {browseTags.length > 0 ? (
+                  browseTags.map((tag) => (
                     <Link
                       key={tag}
                       href={`/?tag=${encodeURIComponent(tag)}`}

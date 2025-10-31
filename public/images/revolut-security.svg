@@ -1,0 +1,29 @@
+<svg width="560" height="360" viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Revolut security illustration</title>
+  <desc id="desc">Layered shields and locks representing Revolut security.</desc>
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eef2ff" />
+      <stop offset="100%" stop-color="#dbeafe" />
+    </linearGradient>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+    <linearGradient id="shieldGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+  </defs>
+  <rect width="560" height="360" rx="32" fill="url(#bgGradient)" />
+  <g transform="translate(120 60)">
+    <path d="M160 0l120 44v80c0 74-52 134-120 152-68-18-120-78-120-152V44L160 0z" fill="#1f2937" opacity="0.1" />
+    <path d="M160 20l100 36v68c0 62-44 112-100 128-56-16-100-66-100-128V56l100-36z" fill="url(#shieldGradient)" opacity="0.85" />
+    <path d="M160 60l72 26v48c0 44-30 80-72 92-42-12-72-48-72-92V86l72-26z" fill="url(#shieldGradient2)" opacity="0.9" />
+    <path d="M160 118c22 0 40 18 40 40v26c0 11-9 20-20 20h-40c-11 0-20-9-20-20v-26c0-22 18-40 40-40z" fill="#0f172a" opacity="0.75" />
+    <rect x="140" y="128" width="40" height="52" rx="12" fill="#f9fafb" />
+    <circle cx="160" cy="154" r="8" fill="#38bdf8" />
+  </g>
+  <circle cx="440" cy="92" r="40" fill="#f472b6" opacity="0.2" />
+  <circle cx="96" cy="292" r="52" fill="#6366f1" opacity="0.15" />
+</svg>

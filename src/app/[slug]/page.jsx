@@ -4,6 +4,122 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import Link from "next/link";
 import Image from "next/image";
+import { headers } from "next/headers";
+
+export const dynamic = "force-dynamic";
+
+function getCountryCodeFromAcceptLanguage(value) {
+  if (!value || typeof value !== "string") {
+    return null;
+  }
+
+  const firstLocale = value.split(",")[0];
+  if (!firstLocale) {
+    return null;
+  }
+
+  const match = firstLocale.match(/-([a-z]{2})$/i);
+  return match ? match[1].toUpperCase() : null;
+}
+
+function readHeaderValue(headerList, name) {
+  if (!headerList || !name) {
+    return null;
+  }
+
+  if (typeof headerList.get === "function") {
+    try {
+      const directValue = headerList.get(name);
+      if (directValue) {
+        return directValue;
+      }
+    } catch {
+      // fall through to handle other shapes
+    }
+  }
+
+  if (typeof headerList.entries === "function") {
+    try {
+      for (const [key, value] of headerList.entries()) {
+        if (key?.toLowerCase() === name.toLowerCase()) {
+          if (Array.isArray(value)) {
+            return value[0] ?? null;
+          }
+          return value ?? null;
+        }
+      }
+    } catch {
+      // fall through to object inspection
+    }
+  }
+
+  if (typeof headerList === "object") {
+    for (const [key, value] of Object.entries(headerList)) {
+      if (key?.toLowerCase() === name.toLowerCase()) {
+        if (Array.isArray(value)) {
+          return value[0] ?? null;
+        }
+        return value ?? null;
+      }
+    }
+  }
+
+  return null;
+}
+
+async function resolveVisitorCountryName() {
+  let headerList = null;
+
+  try {
+    headerList = await headers();
+  } catch {
+    // headers() can throw in non-request contexts; ignore and continue with null
+  }
+
+  const possibleCountryCodes = [
+    readHeaderValue(headerList, "x-vercel-ip-country"),
+    readHeaderValue(headerList, "cf-ipcountry"),
+    readHeaderValue(headerList, "x-country-code"),
+  ];
+
+  const acceptLanguage = readHeaderValue(headerList, "accept-language");
+  const acceptLanguageCode = getCountryCodeFromAcceptLanguage(acceptLanguage);
+
+  if (acceptLanguageCode) {
+    possibleCountryCodes.push(acceptLanguageCode);
+  }
+
+  let displayNames = null;
+
+  if (typeof Intl?.DisplayNames === "function") {
+    try {
+      displayNames = new Intl.DisplayNames(["en"], { type: "region" });
+    } catch {
+      displayNames = null;
+    }
+  }
+
+  if (!displayNames) {
+    return null;
+  }
+
+  for (const code of possibleCountryCodes) {
+    if (!code) {
+      continue;
+    }
+
+    try {
+      const countryName = displayNames.of(code.toUpperCase());
+      if (countryName) {
+        return countryName;
+      }
+    } catch {
+      // Ignore invalid codes and move on to the next option
+    }
+  }
+
+  return null;
+}
 
 export async function generateStaticParams() {
   const postsDir = path.join(process.cwd(), "content/posts");
@@ -19,6 +135,18 @@ export default async function BlogPost({ params }) {
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContent);
   const htmlContent = marked(content);
+  const visitorCountryName = await resolveVisitorCountryName();
+  const generalTags = Array.isArray(data.tags) ? data.tags : [];
+  const countryTags = Array.isArray(data.countryTags) ? data.countryTags : [];
+  const displayTags = [...generalTags];
+
+  if (
+    visitorCountryName &&
+    countryTags.includes(visitorCountryName) &&
+    !displayTags.includes(visitorCountryName)
+  ) {
+    displayTags.push(visitorCountryName);
+  }
 
   return (
     <div className="relative pb-24">
@@ -92,15 +220,18 @@ export default async function BlogPost({ params }) {
                   </div>
                 )}
 
-                {data.tags && (
+                {displayTags.length > 0 && (
                   <div className="flex flex-wrap gap-2">
-                    {data.tags.map((tag) => (
-                      <span
+                    {displayTags.map((tag) => (
+                      <Link
                         key={tag}
-                        className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500"
+                        href={`/?tag=${encodeURIComponent(tag)}`}
+                        className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 transition hover:border-blue-200 hover:text-blue-600"
+                        aria-label={`Browse posts tagged ${tag}`}
                       >
-                        #{tag}
-                      </span>
+                        <span aria-hidden>#</span>
+                        <span>{tag}</span>
+                      </Link>
                     ))}
                   </div>
                 )}

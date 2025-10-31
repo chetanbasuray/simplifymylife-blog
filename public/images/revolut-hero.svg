@@ -1,0 +1,38 @@
+<svg width="560" height="360" viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Revolut app illustration</title>
+  <desc id="desc">A stylized phone displaying the Revolut logo beside travel elements.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eef2ff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9a8d4" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+  </defs>
+  <rect width="560" height="360" rx="32" fill="url(#bg)" />
+  <g transform="translate(120 40)">
+    <rect x="0" y="0" width="200" height="320" rx="36" fill="#0f172a" opacity="0.08" />
+    <rect x="16" y="16" width="200" height="320" rx="36" fill="#0f172a" opacity="0.12" />
+    <rect x="32" y="32" width="200" height="320" rx="36" fill="#0f172a" />
+    <rect x="48" y="60" width="168" height="236" rx="24" fill="#111827" />
+    <rect x="72" y="88" width="120" height="72" rx="16" fill="url(#card)" />
+    <text x="132" y="134" font-family="'Inter', 'Segoe UI', sans-serif" font-size="42" font-weight="700" fill="#fff" text-anchor="middle">R</text>
+    <rect x="72" y="184" width="120" height="16" rx="8" fill="#1f2937" />
+    <rect x="72" y="216" width="96" height="16" rx="8" fill="#1f2937" opacity="0.7" />
+    <rect x="72" y="248" width="64" height="16" rx="8" fill="#1f2937" opacity="0.5" />
+  </g>
+  <g transform="translate(310 120)">
+    <rect x="0" y="40" width="120" height="160" rx="24" fill="url(#card)" opacity="0.85" />
+    <rect x="20" y="0" width="140" height="200" rx="28" fill="url(#accent)" opacity="0.5" />
+    <circle cx="170" cy="180" r="52" fill="#38bdf8" opacity="0.35" />
+    <path d="M162 160h36l-14 32h-36l14-32z" fill="#0f172a" opacity="0.75" />
+  </g>
+  <circle cx="420" cy="92" r="32" fill="#f59e0b" opacity="0.25" />
+  <circle cx="80" cy="280" r="40" fill="#6366f1" opacity="0.18" />
+</svg>
