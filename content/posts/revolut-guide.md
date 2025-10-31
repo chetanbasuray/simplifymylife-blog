@@ -1,7 +1,7 @@
 ---
 title: "Revolut Review: The Everyday Money Super App That Travels Well"
 date: "Nov 3, 2025"
-tags: ["Finance", "Budgeting", "Fintech", "Toolkit"]
+tags: ["Finance", "Budgeting", "Fintech"]
 countryTags:
   - Australia
   - Austria

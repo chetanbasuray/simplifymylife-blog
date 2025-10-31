@@ -223,12 +223,15 @@ export default async function BlogPost({ params }) {
                 {displayTags.length > 0 && (
                   <div className="flex flex-wrap gap-2">
                     {displayTags.map((tag) => (
-                      <span
+                      <Link
                         key={tag}
-                        className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500"
+                        href={`/?tag=${encodeURIComponent(tag)}`}
+                        className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 transition hover:border-blue-200 hover:text-blue-600"
+                        aria-label={`Browse posts tagged ${tag}`}
                       >
-                        #{tag}
-                      </span>
+                        <span aria-hidden>#</span>
+                        <span>{tag}</span>
+                      </Link>
                     ))}
                   </div>
                 )}
