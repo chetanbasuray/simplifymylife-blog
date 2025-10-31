@@ -59,23 +59,6 @@ export default async function HomePage({ searchParams }) {
 
   const featuredPost = filteredPosts[0] ?? posts[0] ?? null;
   const quickReads = posts.slice(0, 4);
-  const pathwayHighlights = [
-    {
-      title: "Reset your rhythm",
-      description: "Refine morning, evening, and weekly resets so your days start with clarity and close with intention.",
-      points: ["Intentional bookends", "Micro-reflections", "Calm close-outs"],
-    },
-    {
-      title: "Streamline your digital stack",
-      description: "Simplify task managers, notes, and automations into a reliable system that stays out of your way.",
-      points: ["Focused capture", "Lightweight automations", "Tool maintenance"],
-    },
-    {
-      title: "Protect mindful focus",
-      description: "Design routines that reduce noise, guard attention, and leave space for meaningful, deep work.",
-      points: ["Attention anchors", "Energy planning", "Reflective resets"],
-    },
-  ];
 
   return (
     <div className="relative pb-20">
@@ -304,60 +287,6 @@ export default async function HomePage({ searchParams }) {
           </aside>
         </section>
 
-        <section className="mt-20">
-          <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-200/70 bg-white/95 p-10 shadow-xl shadow-slate-200/60 sm:p-16">
-            <div className="pointer-events-none absolute inset-0">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-emerald-50" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.2)_0%,_rgba(59,130,246,0.05)_35%,_transparent_70%)]" />
-              <div className="absolute inset-x-12 top-8 h-40 rounded-full bg-gradient-to-r from-sky-200/60 via-transparent to-blue-200/60 blur-3xl" />
-            </div>
-
-            <div className="relative grid gap-12 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] lg:items-center">
-              <div className="space-y-5 text-left">
-                <span className="inline-flex items-center gap-2 rounded-full bg-slate-900/90 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow-sm">
-                  Guided pathways
-                </span>
-                <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl sm:leading-tight">Build mindful systems one focused track at a time.</h2>
-                <p className="max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
-                  Explore curated collections that bundle articles, rituals, and check-ins into practical journeys for bringing more ease to everyday life.
-                </p>
-                <Link
-                  href="/collections"
-                  className="inline-flex w-auto items-center justify-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
-                >
-                  Browse collections
-                </Link>
-              </div>
-
-              <div className="grid gap-6 sm:grid-cols-2">
-                {pathwayHighlights.map((pathway) => (
-                  <div
-                    key={pathway.title}
-                    className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-lg shadow-slate-200/60 transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-2xl"
-                  >
-                    <div className="absolute inset-0 opacity-0 transition group-hover:opacity-100">
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-emerald-500/10" />
-                    </div>
-                    <div className="relative space-y-4">
-                      <h3 className="text-lg font-semibold text-slate-900">{pathway.title}</h3>
-                      <p className="text-sm leading-relaxed text-slate-600">{pathway.description}</p>
-                      <ul className="space-y-2 text-sm text-slate-500">
-                        {pathway.points.map((point) => (
-                          <li key={point} className="flex items-center gap-2">
-                            <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-blue-50 text-xs font-semibold text-blue-600">
-                              •
-                            </span>
-                            <span>{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );
