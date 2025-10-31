@@ -66,39 +66,34 @@ export default async function HomePage({ searchParams }) {
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 pt-12 sm:px-6 lg:px-8">
         <section className="grid gap-5 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
-          <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 p-8 shadow-xl shadow-slate-200/60">
-            <div className="absolute inset-x-8 top-10 h-32 rounded-3xl bg-gradient-to-r from-blue-100 via-indigo-100 to-sky-100 blur-3xl" />
-            <div className="relative flex h-full flex-col gap-6">
-              <div className="space-y-3">
-                <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-blue-600">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 px-8 py-12 shadow-xl shadow-slate-200/60 sm:px-12">
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-100/80 via-white to-indigo-100/70" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.25)_0%,_rgba(59,130,246,0.05)_45%,_transparent_70%)]" />
+              <div className="absolute inset-0 opacity-40 mix-blend-multiply">
+                <div className="absolute inset-x-8 top-6 h-48 rounded-full bg-gradient-to-r from-sky-200/80 via-transparent to-indigo-200/70 blur-3xl" />
+              </div>
+            </div>
+            <div className="relative flex h-full flex-col items-center gap-8 text-center">
+              <div className="space-y-4 sm:space-y-5">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-blue-700 shadow-sm ring-1 ring-white/60">
                   simplify my life
                 </span>
-                <h1 className="text-4xl font-semibold text-slate-900 sm:text-[2.8rem]">
+                <h1 className="max-w-2xl text-4xl font-semibold text-slate-900 sm:text-[3.2rem] sm:leading-[1.05]">
                   Design a calmer, smarter rhythm for everyday life.
                 </h1>
-                <p className="max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
+                <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-600 sm:text-xl sm:leading-relaxed">
                   Curated guidance on habits, digital tools, and thoughtful routines so you can focus on what matters most.
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-3 text-xs font-semibold text-slate-500 sm:text-sm">
-                {["Intentional habits", "Mindful tech", "Clear priorities"].map((pill) => (
-                  <span
-                    key={pill}
-                    className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-1 uppercase tracking-[0.3em] text-slate-500"
-                  >
-                    {pill}
-                  </span>
-                ))}
-              </div>
-
               {featuredPost && (
-                <div className="flex flex-col gap-3 rounded-2xl bg-slate-900/95 p-6 text-slate-100 shadow-lg shadow-slate-900/20 sm:flex-row sm:items-center sm:justify-between">
-                  <div className="space-y-1">
-                    <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-300">
+                <div className="w-full max-w-xl rounded-2xl bg-slate-900/95 p-6 text-left text-slate-100 shadow-lg ring-1 ring-white/5">
+                  <div className="space-y-2">
+                    <p className="text-xs font-medium uppercase tracking-[0.25em] text-slate-300">
                       Featured article
                     </p>
-                    <p className="text-lg font-semibold leading-snug text-white">
+                    <p className="text-xl font-semibold leading-snug text-white">
                       {featuredPost.title}
                     </p>
                     <p className="text-xs text-slate-300">
@@ -107,7 +102,7 @@ export default async function HomePage({ searchParams }) {
                   </div>
                   <Link
                     href={`/${featuredPost.slug}`}
-                    className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100"
+                    className="mt-5 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100"
                   >
                     Read now
                   </Link>
