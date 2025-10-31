@@ -1,0 +1,40 @@
+<svg width="560" height="360" viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Revolut travel essentials illustration</title>
+  <desc id="desc">A Revolut card alongside luggage and a boarding pass.</desc>
+  <defs>
+    <linearGradient id="background" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f3ff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="tagGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <rect width="560" height="360" rx="32" fill="url(#background)" />
+  <g transform="translate(90 60)">
+    <rect x="0" y="32" width="200" height="200" rx="24" fill="#111827" opacity="0.08" />
+    <rect x="12" y="12" width="220" height="220" rx="28" fill="#111827" opacity="0.12" />
+    <rect x="32" y="0" width="220" height="220" rx="28" fill="#1f2937" />
+    <rect x="60" y="28" width="164" height="104" rx="20" fill="url(#cardGradient)" />
+    <text x="142" y="94" font-family="'Inter', 'Segoe UI', sans-serif" font-size="40" font-weight="700" fill="#fff" text-anchor="middle">R</text>
+    <rect x="60" y="152" width="96" height="16" rx="8" fill="#0f172a" opacity="0.6" />
+    <rect x="60" y="180" width="124" height="16" rx="8" fill="#0f172a" opacity="0.35" />
+  </g>
+  <g transform="translate(300 96)">
+    <rect x="40" y="0" width="152" height="200" rx="28" fill="#f3f4f6" stroke="#d1d5db" />
+    <rect x="60" y="28" width="112" height="20" rx="10" fill="#1f2937" opacity="0.08" />
+    <rect x="60" y="64" width="88" height="16" rx="8" fill="#1f2937" opacity="0.12" />
+    <rect x="60" y="96" width="96" height="16" rx="8" fill="#1f2937" opacity="0.12" />
+    <rect x="60" y="128" width="80" height="16" rx="8" fill="#1f2937" opacity="0.12" />
+    <rect x="40" y="156" width="152" height="44" rx="16" fill="#38bdf8" opacity="0.25" />
+    <rect x="16" y="172" width="44" height="44" rx="14" fill="url(#tagGradient)" />
+    <path d="M30 186l16 8-16 8v-16z" fill="#fff" opacity="0.9" />
+  </g>
+  <circle cx="420" cy="74" r="40" fill="#6366f1" opacity="0.18" />
+  <circle cx="120" cy="292" r="48" fill="#f472b6" opacity="0.18" />
+</svg>
