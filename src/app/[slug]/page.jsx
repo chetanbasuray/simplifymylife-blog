@@ -4,6 +4,62 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import Link from "next/link";
 import Image from "next/image";
+import { headers } from "next/headers";
+
+export const dynamic = "force-dynamic";
+
+function getCountryCodeFromAcceptLanguage(value) {
+  if (!value || typeof value !== "string") {
+    return null;
+  }
+
+  const firstLocale = value.split(",")[0];
+  if (!firstLocale) {
+    return null;
+  }
+
+  const match = firstLocale.match(/-([a-z]{2})$/i);
+  return match ? match[1].toUpperCase() : null;
+}
+
+function resolveVisitorCountryName() {
+  const headerList = headers();
+  const possibleCountryCodes = [
+    headerList.get("x-vercel-ip-country"),
+    headerList.get("cf-ipcountry"),
+    headerList.get("x-country-code"),
+  ];
+
+  const acceptLanguage = headerList.get("accept-language");
+  const acceptLanguageCode = getCountryCodeFromAcceptLanguage(acceptLanguage);
+
+  if (acceptLanguageCode) {
+    possibleCountryCodes.push(acceptLanguageCode);
+  }
+
+  if (typeof Intl.DisplayNames === "undefined") {
+    return null;
+  }
+
+  const displayNames = new Intl.DisplayNames(["en"], { type: "region" });
+
+  for (const code of possibleCountryCodes) {
+    if (!code) {
+      continue;
+    }
+
+    try {
+      const countryName = displayNames.of(code.toUpperCase());
+      if (countryName) {
+        return countryName;
+      }
+    } catch {
+      // Ignore invalid codes and move on to the next option
+    }
+  }
+
+  return null;
+}
 
 export async function generateStaticParams() {
   const postsDir = path.join(process.cwd(), "content/posts");
@@ -19,6 +75,18 @@ export default async function BlogPost({ params }) {
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContent);
   const htmlContent = marked(content);
+  const visitorCountryName = resolveVisitorCountryName();
+  const generalTags = Array.isArray(data.tags) ? data.tags : [];
+  const countryTags = Array.isArray(data.countryTags) ? data.countryTags : [];
+  const displayTags = [...generalTags];
+
+  if (
+    visitorCountryName &&
+    countryTags.includes(visitorCountryName) &&
+    !displayTags.includes(visitorCountryName)
+  ) {
+    displayTags.push(visitorCountryName);
+  }
 
   return (
     <div className="relative pb-24">
@@ -92,9 +160,9 @@ export default async function BlogPost({ params }) {
                   </div>
                 )}
 
-                {data.tags && (
+                {displayTags.length > 0 && (
                   <div className="flex flex-wrap gap-2">
-                    {data.tags.map((tag) => (
+                    {displayTags.map((tag) => (
                       <span
                         key={tag}
                         className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500"

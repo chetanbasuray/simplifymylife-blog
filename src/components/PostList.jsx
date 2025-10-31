@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 export default function PostList({ allPosts }) {
-  const allTags = Array.from(new Set(allPosts.flatMap((p) => p.tags || [])));
+  const allTags = Array.from(new Set(allPosts.flatMap((p) => p.displayTags || [])));
   const [search, setSearch] = useState("");
   const [activeTag, setActiveTag] = useState(null);
 
@@ -17,7 +17,7 @@ export default function PostList({ allPosts }) {
       );
 
     const matchesTag = activeTag
-      ? post.tags?.includes(activeTag)
+      ? post.displayTags?.includes(activeTag)
       : true;
 
     return matchesSearch && matchesTag;
@@ -77,59 +77,70 @@ export default function PostList({ allPosts }) {
       {/* Post Grid */}
       <div className="grid sm:grid-cols-2 gap-8">
         {filtered.length > 0 ? (
-          filtered.map((post) => (
-            <article
-              key={post.slug}
-              className="relative group overflow-hidden bg-white rounded-2xl border border-orange-100 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
-            >
-              {/* Accent bar */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-orange-400 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+          filtered.map((post) => {
+            const tagsToDisplay = [...(post.displayTags || [])];
+            if (
+              activeTag &&
+              post.tags?.includes(activeTag) &&
+              !tagsToDisplay.includes(activeTag)
+            ) {
+              tagsToDisplay.push(activeTag);
+            }
 
-              {/* Content */}
-              <div className="p-6">
-                <Link href={`/${post.slug}`}>
-                  <h2 className="text-2xl font-semibold mb-2 text-gray-900 group-hover:text-orange-600 transition-colors">
-                    {post.title}
-                  </h2>
-                </Link>
+            return (
+              <article
+                key={post.slug}
+                className="relative group overflow-hidden bg-white rounded-2xl border border-orange-100 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+              >
+                {/* Accent bar */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-orange-400 opacity-80 group-hover:opacity-100 transition-opacity"></div>
 
-                <p className="text-sm text-gray-500 mb-3">
-                  {post.date
-                    ? new Date(post.date).toLocaleDateString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                      })
-                    : "No date"}{" "}
-                  • {post.readingTime}
-                </p>
+                {/* Content */}
+                <div className="p-6">
+                  <Link href={`/${post.slug}`}>
+                    <h2 className="text-2xl font-semibold mb-2 text-gray-900 group-hover:text-orange-600 transition-colors">
+                      {post.title}
+                    </h2>
+                  </Link>
 
-                {post.tags && post.tags.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {post.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs bg-orange-50 text-orange-700 px-2 py-1 rounded-full"
-                      >
-                        #{tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                  <p className="text-sm text-gray-500 mb-3">
+                    {post.date
+                      ? new Date(post.date).toLocaleDateString("en-US", {
+                          month: "short",
+                          day: "numeric",
+                          year: "numeric",
+                        })
+                      : "No date"}{" "}
+                    • {post.readingTime}
+                  </p>
 
-                <p className="text-gray-700 text-sm leading-relaxed line-clamp-3 mb-3">
-                  {post.excerpt}
-                </p>
+                  {tagsToDisplay.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {tagsToDisplay.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs bg-orange-50 text-orange-700 px-2 py-1 rounded-full"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
 
-                <Link
-                  href={`/${post.slug}`}
-                  className="inline-block text-orange-600 text-sm font-medium hover:underline hover:text-orange-700"
-                >
-                  Read more →
-                </Link>
-              </div>
-            </article>
-          ))
+                  <p className="text-gray-700 text-sm leading-relaxed line-clamp-3 mb-3">
+                    {post.excerpt}
+                  </p>
+
+                  <Link
+                    href={`/${post.slug}`}
+                    className="inline-block text-orange-600 text-sm font-medium hover:underline hover:text-orange-700"
+                  >
+                    Read more →
+                  </Link>
+                </div>
+              </article>
+            );
+          })
         ) : (
           <p className="text-center text-gray-500 col-span-2">
             No posts found.
