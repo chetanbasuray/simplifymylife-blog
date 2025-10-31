@@ -65,13 +65,13 @@ export default async function HomePage({ searchParams }) {
       />
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 pt-12 sm:px-6 lg:px-8">
-        <section className="grid gap-6 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
-          <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 p-10 shadow-xl shadow-slate-200/60">
+        <section className="grid gap-5 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 p-8 shadow-xl shadow-slate-200/60">
             <div className="absolute inset-x-8 top-10 h-32 rounded-3xl bg-gradient-to-r from-blue-100 via-indigo-100 to-sky-100 blur-3xl" />
-            <div className="relative flex h-full flex-col justify-between gap-12">
-              <div className="space-y-5">
+            <div className="relative flex h-full flex-col justify-between gap-8">
+              <div className="space-y-4">
                 <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-blue-600">
-                  mindful systems
+                  simplify my life
                 </span>
                 <h1 className="text-4xl font-semibold text-slate-900 sm:text-[2.8rem]">
                   Design a calmer, smarter rhythm for everyday life.
@@ -82,7 +82,7 @@ export default async function HomePage({ searchParams }) {
               </div>
 
               {featuredPost && (
-                <div className="flex flex-col gap-4 rounded-2xl bg-slate-900/95 p-6 text-slate-100 shadow-lg shadow-slate-900/20 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex flex-col gap-3 rounded-2xl bg-slate-900/95 p-6 text-slate-100 shadow-lg shadow-slate-900/20 sm:flex-row sm:items-center sm:justify-between">
                   <div className="space-y-1">
                     <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-300">
                       Featured article
@@ -105,16 +105,16 @@ export default async function HomePage({ searchParams }) {
             </div>
           </div>
 
-          <div className="grid gap-6">
-            <div className="rounded-3xl border border-slate-200/70 bg-white/95 p-6 shadow-md shadow-slate-200/50">
+          <div className="grid gap-5">
+            <div className="rounded-3xl border border-slate-200/70 bg-white/95 p-5 shadow-md shadow-slate-200/50">
               <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Daily reset</h2>
               <p className="mt-2 text-base text-slate-600">
                 A lightweight checklist to recentre your focus in under five minutes.
               </p>
-              <ul className="mt-5 space-y-3 text-sm text-slate-600">
+              <ul className="mt-4 space-y-2 text-sm text-slate-600">
                 {["Brain dump tasks", "Review calendar commitments", "Set one highlight", "Tidy your digital desktop"].map(
                   (item) => (
-                    <li key={item} className="flex items-start gap-3 rounded-2xl bg-slate-50/90 px-4 py-3">
+                    <li key={item} className="flex items-start gap-3 rounded-2xl bg-slate-50/90 px-4 py-2.5">
                       <span className="mt-1 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full border border-slate-300 bg-white text-[10px] font-semibold text-slate-500">
                         ✓
                       </span>
@@ -125,10 +125,10 @@ export default async function HomePage({ searchParams }) {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-slate-200/70 bg-white/95 p-6 shadow-md shadow-slate-200/50">
+            <div className="rounded-3xl border border-slate-200/70 bg-white/95 p-5 shadow-md shadow-slate-200/50">
               <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Toolkit spotlight</h2>
-              <div className="mt-4 space-y-3 text-sm text-slate-600">
-                <p className="rounded-2xl bg-blue-50/70 px-4 py-3 leading-relaxed text-blue-900">
+              <div className="mt-3 space-y-2 text-sm text-slate-600">
+                <p className="rounded-2xl bg-blue-50/70 px-4 py-2.5 leading-relaxed text-blue-900">
                   “Schedule a recurring <strong>weekly review</strong> in your calendar and treat it like a meeting with yourself. Five
                   consistent sessions are more powerful than one perfect overhaul.”
                 </p>
@@ -148,7 +148,7 @@ export default async function HomePage({ searchParams }) {
           </div>
         </section>
 
-        <section className="mt-14 grid gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
+        <section className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
           <div className="space-y-6">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
