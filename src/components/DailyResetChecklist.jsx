@@ -104,6 +104,7 @@ export default function DailyResetChecklist() {
   }, [todos]);
 
   const completedCount = useMemo(() => todos.filter((todo) => todo.completed).length, [todos]);
+  const incompleteCount = useMemo(() => todos.filter((todo) => !todo.completed).length, [todos]);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -185,6 +186,41 @@ export default function DailyResetChecklist() {
     }
   }
 
+  const TodoItem = ({ todo }) => (
+    <li className="group flex items-center gap-3 rounded-2xl bg-slate-50/90 px-4 py-2.5">
+      <button
+        type="button"
+        onClick={() => handleToggle(todo.id)}
+        className="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border border-slate-300 bg-white text-[12px] font-semibold text-slate-500 transition hover:border-blue-400 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+        aria-pressed={todo.completed}
+        aria-label={todo.completed ? "Mark task as not done" : "Mark task as done"}
+      >
+        {todo.completed ? "✓" : ""}
+      </button>
+      {editing?.id === todo.id ? (
+        <input
+          value={editing.text}
+          onChange={(event) =>
+            setEditing((current) =>
+              current && current.id === todo.id ? { ...current, text: event.target.value } : current,
+            )
+          }
+          onBlur={applyEditing}
+          onKeyDown={handleEditingKeyDown}
+          autoFocus
+          className="flex-1 rounded-md border border-slate-200 bg-white px-2 py-1 text-sm text-slate-700 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
+        />
+      ) : (
+        <span
+          onDoubleClick={() => startEditing(todo)}
+          className={`flex-1 leading-snug transition group-hover:text-slate-700 ${todo.completed ? "text-slate-400 line-through" : ""}`}
+        >
+          {todo.text}
+        </span>
+      )}
+    </li>
+  );
+
   return (
     <div className="rounded-3xl border border-slate-200/70 bg-white/95 p-5 shadow-md shadow-slate-200/50">
       <div className="space-y-2">
@@ -215,50 +251,21 @@ export default function DailyResetChecklist() {
           Add
         </button>
       </form>
-
-      <ul className="mt-4 space-y-2 text-sm text-slate-600">
-        {todos.map((todo) => (
-          <li
-            key={todo.id}
-            className="group flex items-center gap-3 rounded-2xl bg-slate-50/90 px-4 py-2.5"
-          >
-            <button
-              type="button"
-              onClick={() => handleToggle(todo.id)}
-              className="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border border-slate-300 bg-white text-[12px] font-semibold text-slate-500 transition hover:border-blue-400 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
-              aria-pressed={todo.completed}
-              aria-label={todo.completed ? "Mark task as not done" : "Mark task as done"}
-            >
-              {todo.completed ? "✓" : ""}
-            </button>
-            {editing?.id === todo.id ? (
-              <input
-                value={editing.text}
-                onChange={(event) =>
-                  setEditing((current) =>
-                    current && current.id === todo.id
-                      ? { ...current, text: event.target.value }
-                      : current,
-                  )
-                }
-                onBlur={applyEditing}
-                onKeyDown={handleEditingKeyDown}
-                autoFocus
-                className="flex-1 rounded-md border border-slate-200 bg-white px-2 py-1 text-sm text-slate-700 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
-              />
-            ) : (
-              <span
-                onDoubleClick={() => startEditing(todo)}
-                className={`flex-1 leading-snug transition group-hover:text-slate-700 ${
-                  todo.completed ? "text-slate-400 line-through" : ""
-                }`}
-              >
-                {todo.text}
-              </span>
-            )}
-          </li>
-        ))}
-      </ul>
+      <section className="mt-4 flex min-h-[220px] flex-col rounded-2xl border border-slate-100 bg-slate-50/70 p-4 text-sm text-slate-600">
+        <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-slate-500">
+          <h3 className="text-[11px] font-semibold text-slate-600">Task list</h3>
+          <span className="text-[10px] font-medium text-slate-400">{incompleteCount} open</span>
+        </div>
+        <ul className="mt-3 flex-1 space-y-2 overflow-y-auto pr-1 max-h-56">
+          {todos.length === 0 ? (
+            <li className="rounded-xl border border-dashed border-slate-200 bg-white/60 p-4 text-center text-xs text-slate-400">
+              All caught up! Add a new task to get started.
+            </li>
+          ) : (
+            todos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
+          )}
+        </ul>
+      </section>
 
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
         This list lives entirely in your browser — nothing is sent to any servers. Clearing your local storage will remove
