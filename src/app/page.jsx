@@ -3,6 +3,8 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 
+import DailyResetChecklist from "@/components/DailyResetChecklist";
+
 function parseDate(value) {
   const timestamp = Date.parse(value);
   return Number.isNaN(timestamp) ? 0 : timestamp;
@@ -46,7 +48,8 @@ export default async function HomePage({ searchParams }) {
     a.localeCompare(b),
   );
 
-  const tagParam = searchParams?.tag;
+  const resolvedSearchParams = await searchParams;
+  const tagParam = resolvedSearchParams?.tag;
   const activeTag = Array.isArray(tagParam) ? tagParam[0] : tagParam;
   const normalizedTag = activeTag ? decodeURIComponent(activeTag) : "";
 
@@ -129,24 +132,7 @@ export default async function HomePage({ searchParams }) {
           </div>
 
           <div className="grid gap-5">
-            <div className="rounded-3xl border border-slate-200/70 bg-white/95 p-5 shadow-md shadow-slate-200/50">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Daily reset</h2>
-              <p className="mt-2 text-base text-slate-600">
-                A lightweight checklist to recentre your focus in under five minutes.
-              </p>
-              <ul className="mt-4 space-y-2 text-sm text-slate-600">
-                {["Brain dump tasks", "Review calendar commitments", "Set one highlight", "Tidy your digital desktop"].map(
-                  (item) => (
-                    <li key={item} className="flex items-start gap-3 rounded-2xl bg-slate-50/90 px-4 py-2.5">
-                      <span className="mt-1 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full border border-slate-300 bg-white text-[10px] font-semibold text-slate-500">
-                        ✓
-                      </span>
-                      <span className="leading-snug">{item}</span>
-                    </li>
-                  ),
-                )}
-              </ul>
-            </div>
+            <DailyResetChecklist />
 
             <div className="rounded-3xl border border-slate-200/70 bg-white/95 p-5 shadow-md shadow-slate-200/50">
               <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Toolkit spotlight</h2>
