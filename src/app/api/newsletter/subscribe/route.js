@@ -32,7 +32,7 @@ export async function POST(request) {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        email: normalizedEmail,
+        email_address: normalizedEmail,
       }),
     });
 
