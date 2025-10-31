@@ -1,6 +1,6 @@
 ---
 title: "Wise Review: How the Money-Transfer App Turned Into a Multi-Currency Account"
-date: "Oct 30, 2025"
+date: "Oct 30, 2023"
 tags: ["Finance", "Saving", "Fintech"]
 countryTags:
   - Andorra

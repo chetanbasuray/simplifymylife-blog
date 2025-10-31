@@ -6,9 +6,25 @@ import Link from "next/link";
 import DailyResetChecklist from "@/components/DailyResetChecklist";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
+export const dynamic = "force-dynamic";
+
 function parseDate(value) {
+  if (!value) {
+    return null;
+  }
+
   const timestamp = Date.parse(value);
-  return Number.isNaN(timestamp) ? 0 : timestamp;
+  return Number.isNaN(timestamp) ? null : timestamp;
+}
+
+function isPublished(dateString, referenceTime = Date.now()) {
+  const timestamp = parseDate(dateString);
+
+  if (timestamp === null) {
+    return true;
+  }
+
+  return timestamp <= referenceTime;
 }
 
 function formatDate(dateString) {
@@ -50,7 +66,12 @@ export default async function HomePage({ searchParams }) {
         guestSubmission: Boolean(data.guestSubmission),
       };
     })
-    .sort((a, b) => parseDate(b.date) - parseDate(a.date));
+    .filter((post) => isPublished(post.date))
+    .sort((a, b) => {
+      const aTime = parseDate(a.date) ?? 0;
+      const bTime = parseDate(b.date) ?? 0;
+      return bTime - aTime;
+    });
 
   const allTags = Array.from(new Set(posts.flatMap((p) => p.displayTags || []))).sort((a, b) =>
     a.localeCompare(b),

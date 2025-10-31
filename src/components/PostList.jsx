@@ -3,12 +3,32 @@
 import { useState } from "react";
 import Link from "next/link";
 
+function parseDate(value) {
+  if (!value) {
+    return null;
+  }
+
+  const timestamp = Date.parse(value);
+  return Number.isNaN(timestamp) ? null : timestamp;
+}
+
+function isPublished(dateValue, referenceTime = Date.now()) {
+  const timestamp = parseDate(dateValue);
+
+  if (timestamp === null) {
+    return true;
+  }
+
+  return timestamp <= referenceTime;
+}
+
 export default function PostList({ allPosts }) {
-  const allTags = Array.from(new Set(allPosts.flatMap((p) => p.displayTags || [])));
+  const publishedPosts = allPosts.filter((post) => isPublished(post.date));
+  const allTags = Array.from(new Set(publishedPosts.flatMap((p) => p.displayTags || [])));
   const [search, setSearch] = useState("");
   const [activeTag, setActiveTag] = useState(null);
 
-  const filtered = allPosts.filter((post) => {
+  const filtered = publishedPosts.filter((post) => {
     const matchesSearch =
       post.title.toLowerCase().includes(search.toLowerCase()) ||
       post.excerpt?.toLowerCase().includes(search.toLowerCase()) ||
@@ -87,6 +107,17 @@ export default function PostList({ allPosts }) {
               tagsToDisplay.push(activeTag);
             }
 
+            const publishTimestamp = parseDate(post.date);
+            const formattedDate = publishTimestamp
+              ? new Date(publishTimestamp).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                })
+              : post.date && post.date !== "Unknown"
+              ? post.date
+              : "No date";
+
             return (
               <article
                 key={post.slug}
@@ -104,13 +135,7 @@ export default function PostList({ allPosts }) {
                   </Link>
 
                   <p className="text-sm text-gray-500 mb-3">
-                    {post.date
-                      ? new Date(post.date).toLocaleDateString("en-US", {
-                          month: "short",
-                          day: "numeric",
-                          year: "numeric",
-                        })
-                      : "No date"}{" "}
+                    {formattedDate}{" "}
                     • {post.readingTime}
                   </p>
 
