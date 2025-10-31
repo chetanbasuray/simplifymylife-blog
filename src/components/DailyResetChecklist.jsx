@@ -104,8 +104,7 @@ export default function DailyResetChecklist() {
   }, [todos]);
 
   const completedCount = useMemo(() => todos.filter((todo) => todo.completed).length, [todos]);
-  const incompleteTodos = useMemo(() => todos.filter((todo) => !todo.completed), [todos]);
-  const completeTodos = useMemo(() => todos.filter((todo) => todo.completed), [todos]);
+  const incompleteCount = useMemo(() => todos.filter((todo) => !todo.completed).length, [todos]);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -252,39 +251,21 @@ export default function DailyResetChecklist() {
           Add
         </button>
       </form>
-      <div className="mt-4 grid gap-4 text-sm text-slate-600 sm:grid-cols-2">
-        <section className="flex min-h-[220px] flex-col rounded-2xl border border-slate-100 bg-slate-50/70 p-4">
-          <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-slate-500">
-            <h3 className="text-[11px] font-semibold text-slate-600">To do</h3>
-            <span className="text-[10px] font-medium text-slate-400">{incompleteTodos.length}</span>
-          </div>
-          <ul className="mt-3 flex-1 space-y-2 overflow-y-auto pr-1 max-h-56">
-            {incompleteTodos.length === 0 ? (
-              <li className="rounded-xl border border-dashed border-slate-200 bg-white/60 p-4 text-center text-xs text-slate-400">
-                All caught up! Add a new task to get started.
-              </li>
-            ) : (
-              incompleteTodos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
-            )}
-          </ul>
-        </section>
-
-        <section className="flex min-h-[220px] flex-col rounded-2xl border border-slate-100 bg-slate-50/70 p-4">
-          <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-slate-500">
-            <h3 className="text-[11px] font-semibold text-slate-600">Done</h3>
-            <span className="text-[10px] font-medium text-slate-400">{completeTodos.length}</span>
-          </div>
-          <ul className="mt-3 flex-1 space-y-2 overflow-y-auto pr-1 max-h-56">
-            {completeTodos.length === 0 ? (
-              <li className="rounded-xl border border-dashed border-slate-200 bg-white/60 p-4 text-center text-xs text-slate-400">
-                Nothing completed yet. Tap a task to mark it done.
-              </li>
-            ) : (
-              completeTodos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
-            )}
-          </ul>
-        </section>
-      </div>
+      <section className="mt-4 flex min-h-[220px] flex-col rounded-2xl border border-slate-100 bg-slate-50/70 p-4 text-sm text-slate-600">
+        <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-slate-500">
+          <h3 className="text-[11px] font-semibold text-slate-600">Task list</h3>
+          <span className="text-[10px] font-medium text-slate-400">{incompleteCount} open</span>
+        </div>
+        <ul className="mt-3 flex-1 space-y-2 overflow-y-auto pr-1 max-h-56">
+          {todos.length === 0 ? (
+            <li className="rounded-xl border border-dashed border-slate-200 bg-white/60 p-4 text-center text-xs text-slate-400">
+              All caught up! Add a new task to get started.
+            </li>
+          ) : (
+            todos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
+          )}
+        </ul>
+      </section>
 
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
         This list lives entirely in your browser — nothing is sent to any servers. Clearing your local storage will remove
