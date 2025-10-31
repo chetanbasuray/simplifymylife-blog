@@ -33,8 +33,6 @@ export async function POST(request) {
       },
       body: JSON.stringify({
         email: normalizedEmail,
-        notes: "Simplify My Life Sunday Note subscriber",
-        tags: ["simplify-my-life", "newsletter"],
       }),
     });
 
@@ -44,11 +42,20 @@ export async function POST(request) {
 
     const payload = await response.json().catch(() => null);
 
-    if (response.status === 400 && payload?.email?.[0]) {
-      const detail = payload.email[0];
-      if (/already/i.test(detail)) {
+    if ((response.status === 400 || response.status === 422) && payload) {
+      const detail =
+        payload.email?.[0] || payload.non_field_errors?.[0] || payload.detail || payload.message || "";
+
+      if (detail && /already/i.test(detail)) {
         return NextResponse.json({ message: "You’re already on the list. We’re glad you’re staying!" }, { status: 200 });
       }
+
+      return NextResponse.json(
+        {
+          error: detail || "We couldn’t add that email right now. Please try again shortly.",
+        },
+        { status: response.status },
+      );
     }
 
     if (!response.ok) {
