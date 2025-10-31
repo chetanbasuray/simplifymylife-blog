@@ -89,11 +89,19 @@ async function resolveVisitorCountryName() {
     possibleCountryCodes.push(acceptLanguageCode);
   }
 
-  if (typeof Intl.DisplayNames === "undefined") {
-    return null;
+  let displayNames = null;
+
+  if (typeof Intl?.DisplayNames === "function") {
+    try {
+      displayNames = new Intl.DisplayNames(["en"], { type: "region" });
+    } catch {
+      displayNames = null;
+    }
   }
 
-  const displayNames = new Intl.DisplayNames(["en"], { type: "region" });
+  if (!displayNames) {
+    return null;
+  }
 
   for (const code of possibleCountryCodes) {
     if (!code) {
