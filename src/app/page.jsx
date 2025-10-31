@@ -155,7 +155,7 @@ export default async function HomePage({ searchParams }) {
         </section>
 
         <section className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
-          <div className="space-y-6">
+          <div className="space-y-6 text-left">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <h2 className="text-2xl font-semibold text-slate-900">Latest writing</h2>
