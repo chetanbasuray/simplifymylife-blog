@@ -101,7 +101,7 @@ It’s also a perfect fit for Simplify My Life because Revolut shows how thought
         />
       </svg>
     </a>
-    <p class="cta-card__note">I keep the base invite code the same and update the promo suffix whenever Revolut rotates offers, so this button always points to my best available link.</p>
+    <p class="cta-card__note">Revolut refreshes its welcome perks regularly, so check the signup screen to see whether you’re unlocking fee credits, cashback, or another limited-time bonus.</p>
   </div>
 </div>
 
@@ -308,6 +308,6 @@ Revolut shines when you want one dashboard for everyday spending, travel perks, 
         />
       </svg>
     </a>
-    <p class="cta-card__note">The base code stays <code>chetanzyv</code>; I refresh the trailing promo details so you always land on the most rewarding offer.</p>
+    <p class="cta-card__note">Look for the highlighted promotion during signup—Revolut tailors bonuses by region, and the offer shown there is the one you’ll receive.</p>
   </div>
 </div>
