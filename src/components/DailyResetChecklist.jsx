@@ -89,6 +89,7 @@ function addTodoToList(todos, newTodo) {
 export default function DailyResetChecklist() {
   const [todos, setTodos] = useState(getInitialTodos);
   const [draft, setDraft] = useState("");
+  const [editing, setEditing] = useState(null);
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -119,9 +120,11 @@ export default function DailyResetChecklist() {
 
     setTodos((current) => addTodoToList(current, newTodo));
     setDraft("");
+    setEditing(null);
   }
 
   function handleToggle(id) {
+    setEditing((current) => (current?.id === id ? null : current));
     setTodos((current) => {
       let toggledTodo = null;
       const updated = current.map((todo) => {
@@ -139,6 +142,47 @@ export default function DailyResetChecklist() {
 
       return moveTodo(updated, toggledTodo);
     });
+  }
+
+  function startEditing(todo) {
+    setEditing({ id: todo.id, text: todo.text });
+  }
+
+  function cancelEditing() {
+    setEditing(null);
+  }
+
+  function applyEditing() {
+    if (!editing) {
+      return;
+    }
+
+    const next = editing.text.trim();
+    if (!next) {
+      setEditing(null);
+      return;
+    }
+
+    setTodos((current) =>
+      current.map((todo) => {
+        if (todo.id !== editing.id) {
+          return todo;
+        }
+
+        return { ...todo, text: next };
+      }),
+    );
+    setEditing(null);
+  }
+
+  function handleEditingKeyDown(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      applyEditing();
+    } else if (event.key === "Escape") {
+      event.preventDefault();
+      cancelEditing();
+    }
   }
 
   return (
@@ -187,13 +231,31 @@ export default function DailyResetChecklist() {
             >
               {todo.completed ? "✓" : ""}
             </button>
-            <span
-              className={`flex-1 leading-snug transition group-hover:text-slate-700 ${
-                todo.completed ? "text-slate-400 line-through" : ""
-              }`}
-            >
-              {todo.text}
-            </span>
+            {editing?.id === todo.id ? (
+              <input
+                value={editing.text}
+                onChange={(event) =>
+                  setEditing((current) =>
+                    current && current.id === todo.id
+                      ? { ...current, text: event.target.value }
+                      : current,
+                  )
+                }
+                onBlur={applyEditing}
+                onKeyDown={handleEditingKeyDown}
+                autoFocus
+                className="flex-1 rounded-md border border-slate-200 bg-white px-2 py-1 text-sm text-slate-700 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
+              />
+            ) : (
+              <span
+                onDoubleClick={() => startEditing(todo)}
+                className={`flex-1 leading-snug transition group-hover:text-slate-700 ${
+                  todo.completed ? "text-slate-400 line-through" : ""
+                }`}
+              >
+                {todo.text}
+              </span>
+            )}
           </li>
         ))}
       </ul>
