@@ -74,15 +74,15 @@ export default async function HomePage({ searchParams }) {
                 <div className="absolute inset-x-8 top-6 h-48 rounded-full bg-gradient-to-r from-sky-200/80 via-transparent to-indigo-200/70 blur-3xl" />
               </div>
             </div>
-            <div className="relative flex h-full flex-col items-center gap-8 text-center">
+            <div className="relative flex h-full flex-col items-start gap-8 text-left">
               <div className="space-y-4 sm:space-y-5">
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-blue-700 shadow-sm ring-1 ring-white/60">
+                <span className="inline-flex items-center gap-2 self-start rounded-full bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-blue-700 shadow-sm ring-1 ring-white/60">
                   simplify my life
                 </span>
                 <h1 className="max-w-2xl text-4xl font-semibold text-slate-900 sm:text-[3.2rem] sm:leading-[1.05]">
                   Design a calmer, smarter rhythm for everyday life.
                 </h1>
-                <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-600 sm:text-xl sm:leading-relaxed">
+                <p className="max-w-2xl text-base leading-relaxed text-slate-600 sm:text-xl sm:leading-relaxed">
                   Curated guidance on habits, digital tools, and thoughtful routines so you can focus on what matters most.
                 </p>
               </div>
@@ -102,7 +102,7 @@ export default async function HomePage({ searchParams }) {
                   </div>
                   <Link
                     href={`/${featuredPost.slug}`}
-                    className="mt-5 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100"
+                    className="mt-5 inline-flex w-auto items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100"
                   >
                     Read now
                   </Link>
