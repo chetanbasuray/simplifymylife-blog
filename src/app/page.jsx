@@ -40,6 +40,7 @@ export default async function HomePage({ searchParams }) {
         tags: data.tags || [],
         excerpt: data.excerpt || "",
         readingTime: data.readingTime || "",
+        guestSubmission: Boolean(data.guestSubmission),
       };
     })
     .sort((a, b) => parseDate(b.date) - parseDate(a.date));
@@ -59,6 +60,15 @@ export default async function HomePage({ searchParams }) {
 
   const featuredPost = filteredPosts[0] ?? posts[0] ?? null;
   const quickReads = posts.slice(0, 4);
+  const toolkitPosts = posts
+    .filter((post) => post.tags?.some((tag) => tag.toLowerCase() === "toolkit"))
+    .sort((a, b) => {
+      if (a.guestSubmission === b.guestSubmission) {
+        return parseDate(b.date) - parseDate(a.date);
+      }
+
+      return a.guestSubmission ? -1 : 1;
+    });
 
   return (
     <div className="relative pb-20">
@@ -117,26 +127,70 @@ export default async function HomePage({ searchParams }) {
           <div className="grid gap-5">
             <DailyResetChecklist />
 
-            <div className="rounded-3xl border border-slate-200/70 bg-white/95 p-5 shadow-md shadow-slate-200/50">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Toolkit spotlight</h2>
-              <div className="mt-3 space-y-2 text-sm text-slate-600">
-                <p className="rounded-2xl bg-blue-50/70 px-4 py-2.5 leading-relaxed text-blue-900">
-                  “Schedule a recurring <strong>weekly review</strong> in your calendar and treat it like a meeting with yourself. Five
-                  consistent sessions are more powerful than one perfect overhaul.”
-                </p>
-                <div className="rounded-2xl border border-dashed border-slate-200 px-4 py-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Apps on rotation</p>
-                  <ul className="mt-3 space-y-2 text-sm">
-                    {["Notion for project hubs", "Things for capture", "Readwise for notes", "Cron for time blocking"].map((tool) => (
-                      <li key={tool} className="flex items-center justify-between rounded-xl px-3 py-2 hover:bg-slate-50/80">
-                        <span>{tool}</span>
-                        <span className="text-xs font-medium text-slate-400">personal stack</span>
+            {toolkitPosts.length > 0 && (
+              <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-gradient-to-br from-white via-white to-blue-50/60 p-6 shadow-md shadow-slate-200/50">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(191,219,254,0.45)_0%,_transparent_65%)]" aria-hidden />
+                <div className="relative">
+                  <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Toolkit spotlight</h2>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                    Articles focused on systems and tools to organise the everyday. Guest submissions from partner teams are highlighted.
+                  </p>
+                  <ul className="mt-5 space-y-3">
+                    {toolkitPosts.map((post) => (
+                      <li key={post.slug} className="relative">
+                        <div
+                          className={`rounded-3xl ${
+                            post.guestSubmission ? "bg-gradient-to-r from-amber-300 via-pink-300 to-rose-400 p-[2px] shadow-sm" : ""
+                          }`}
+                        >
+                          <div
+                            className={`relative flex items-start justify-between gap-4 rounded-2xl border p-4 transition hover:-translate-y-[1px] hover:bg-white hover:shadow-sm ${
+                              post.guestSubmission
+                                ? "border-transparent bg-white/95"
+                                : "border-slate-200/70 bg-white/80"
+                            }`}
+                          >
+                            <div className="space-y-2">
+                              <Link
+                                href={`/${post.slug}`}
+                                className="block text-base font-semibold leading-snug text-slate-900 transition hover:text-blue-600"
+                              >
+                                {post.title}
+                              </Link>
+                              {post.excerpt && (
+                                <p className="text-sm leading-relaxed text-slate-600">
+                                  {post.excerpt}
+                                </p>
+                              )}
+                              <div className="flex flex-wrap items-center gap-3 text-xs font-medium text-slate-400">
+                                <span>{post.date !== "Unknown" ? formatDate(post.date) : "New"}</span>
+                                {post.readingTime && post.readingTime.length > 0 && <span>{post.readingTime}</span>}
+                                {post.guestSubmission && (
+                                  <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 text-amber-700">
+                                    <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-amber-400 to-pink-400" />
+                                    Guest spotlight
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                            <Link
+                              href={`/${post.slug}`}
+                              className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full border border-slate-200/70 text-slate-400 transition hover:border-blue-200 hover:text-blue-600"
+                              aria-label={`Read ${post.title}`}
+                            >
+                              →
+                            </Link>
+                          </div>
+                        </div>
                       </li>
                     ))}
                   </ul>
+                  <p className="mt-4 text-xs text-slate-400">
+                    Entries live entirely on this site. To feature your toolkit, reach out for contributor guidelines.
+                  </p>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </section>
 
