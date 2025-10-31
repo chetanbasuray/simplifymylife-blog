@@ -22,15 +22,67 @@ function getCountryCodeFromAcceptLanguage(value) {
   return match ? match[1].toUpperCase() : null;
 }
 
-function resolveVisitorCountryName() {
-  const headerList = headers();
+function readHeaderValue(headerList, name) {
+  if (!headerList || !name) {
+    return null;
+  }
+
+  if (typeof headerList.get === "function") {
+    try {
+      const directValue = headerList.get(name);
+      if (directValue) {
+        return directValue;
+      }
+    } catch {
+      // fall through to handle other shapes
+    }
+  }
+
+  if (typeof headerList.entries === "function") {
+    try {
+      for (const [key, value] of headerList.entries()) {
+        if (key?.toLowerCase() === name.toLowerCase()) {
+          if (Array.isArray(value)) {
+            return value[0] ?? null;
+          }
+          return value ?? null;
+        }
+      }
+    } catch {
+      // fall through to object inspection
+    }
+  }
+
+  if (typeof headerList === "object") {
+    for (const [key, value] of Object.entries(headerList)) {
+      if (key?.toLowerCase() === name.toLowerCase()) {
+        if (Array.isArray(value)) {
+          return value[0] ?? null;
+        }
+        return value ?? null;
+      }
+    }
+  }
+
+  return null;
+}
+
+async function resolveVisitorCountryName() {
+  let headerList = null;
+
+  try {
+    headerList = await headers();
+  } catch {
+    // headers() can throw in non-request contexts; ignore and continue with null
+  }
+
   const possibleCountryCodes = [
-    headerList.get("x-vercel-ip-country"),
-    headerList.get("cf-ipcountry"),
-    headerList.get("x-country-code"),
+    readHeaderValue(headerList, "x-vercel-ip-country"),
+    readHeaderValue(headerList, "cf-ipcountry"),
+    readHeaderValue(headerList, "x-country-code"),
   ];
 
-  const acceptLanguage = headerList.get("accept-language");
+  const acceptLanguage = readHeaderValue(headerList, "accept-language");
   const acceptLanguageCode = getCountryCodeFromAcceptLanguage(acceptLanguage);
 
   if (acceptLanguageCode) {
@@ -75,7 +127,7 @@ export default async function BlogPost({ params }) {
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContent);
   const htmlContent = marked(content);
-  const visitorCountryName = resolveVisitorCountryName();
+  const visitorCountryName = await resolveVisitorCountryName();
   const generalTags = Array.isArray(data.tags) ? data.tags : [];
   const countryTags = Array.isArray(data.countryTags) ? data.countryTags : [];
   const displayTags = [...generalTags];
