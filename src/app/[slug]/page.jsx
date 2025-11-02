@@ -121,6 +121,35 @@ async function resolveVisitorCountryName() {
   return null;
 }
 
+function getQuickFactsHeading(data) {
+  if (data) {
+    const possibleTitle =
+      typeof data.quickFactsTitle === "string"
+        ? data.quickFactsTitle
+        : typeof data.quickFactsHeading === "string"
+        ? data.quickFactsHeading
+        : null;
+
+    if (possibleTitle?.trim()) {
+      return possibleTitle.trim();
+    }
+
+    if (typeof data.title === "string" && data.title.trim()) {
+      const primarySegment = data.title.split(":")[0] ?? data.title;
+      let cleaned = primarySegment
+        .replace(/\b(Review|Guide|Overview)\b/gi, "")
+        .replace(/\s{2,}/g, " ")
+        .trim();
+
+      if (cleaned) {
+        return `${cleaned} at a glance`;
+      }
+    }
+  }
+
+  return "Quick facts";
+}
+
 export async function generateStaticParams() {
   const postsDir = path.join(process.cwd(), "content/posts");
   const files = fs.readdirSync(postsDir);
@@ -271,7 +300,9 @@ export default async function BlogPost({ params }) {
 
               {data.quickFacts && Array.isArray(data.quickFacts) && data.quickFacts.length > 0 && (
                 <section className="rounded-3xl border border-slate-200/80 bg-white/95 p-6 text-sm text-slate-600 shadow-lg shadow-slate-200/50">
-                  <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Wise at a glance</h2>
+                  <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+                    {getQuickFactsHeading(data)}
+                  </h2>
                   <dl className="mt-4 space-y-4">
                     {data.quickFacts.map((fact) => (
                       <div key={`${fact.label}-${fact.value}`} className="space-y-1">
