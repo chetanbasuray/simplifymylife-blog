@@ -1,0 +1,27 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" rx="48" fill="#E0F2FE" />
+  <g filter="url(#shadow)">
+    <rect x="180" y="110" width="600" height="360" rx="36" fill="#FFFFFF" />
+  </g>
+  <rect x="220" y="150" width="520" height="70" rx="24" fill="#2563EB" opacity="0.12" />
+  <rect x="240" y="170" width="220" height="34" rx="12" fill="#3B82F6" opacity="0.7" />
+  <rect x="480" y="170" width="220" height="34" rx="12" fill="#22D3EE" opacity="0.45" />
+  <rect x="220" y="250" width="520" height="200" rx="28" fill="#F0F9FF" />
+  <path d="M260 340c40-60 100-80 160-20 80 80 160-40 240 0" stroke="#2563EB" stroke-width="16" stroke-linecap="round" fill="none" />
+  <circle cx="280" cy="360" r="26" fill="#2563EB" />
+  <circle cx="440" cy="320" r="22" fill="#22D3EE" />
+  <circle cx="620" cy="360" r="26" fill="#0EA5E9" />
+  <path d="M260 280h120" stroke="#F59E0B" stroke-width="12" stroke-linecap="round" />
+  <path d="M440 280h140" stroke="#22D3EE" stroke-width="12" stroke-linecap="round" />
+  <defs>
+    <filter id="shadow" x="140" y="70" width="680" height="440" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+      <feOffset dy="20" />
+      <feGaussianBlur stdDeviation="26" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.15 0 0 0 0 0.2 0 0 0 0 0.35 0 0 0 0.12 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+    </filter>
+  </defs>
+</svg>

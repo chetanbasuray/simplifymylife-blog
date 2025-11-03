@@ -1,0 +1,1 @@
+> **Reader perk:** Use the code **FLINK-71ETQC** during your first Flink grocery order (minimum €30) to unlock €15 off convenient home delivery. Share the code with friends to earn future credits and review the [refer-a-friend terms](https://www.goflink.com/en/refer-a-friend/) for eligibility details in your city.
