@@ -157,12 +157,48 @@ Set recurring reminders to use leftovers. Apps like Too Good To Go or Motatos he
 - **Combine with nutrition coaching.** Services like Zoe or Lifesum adapt meal plans to your energy levels.
 - **Share wins.** Snap photos of your weekly board and send them to your accountability buddy.
 
+<div id="flink-referral">
 {{snippet:flink-referral}}
+</div>
 
-## Conclusion
+## Final thoughts
 
 A dependable meal planning and delivery routine removes nightly guesswork, keeps budgets predictable, and frees up energy for what matters. Embrace the automation, and dinner becomes a calm ritual again.
 
-## Call to Action
+<div class="cta-card">
+  <div class="cta-card__header">
+    <div class="cta-card__icon" aria-hidden="true">
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="#f0fdf4" />
+        <path d="M12 22h16v3H12zm3-6h10v3H15z" fill="#16a34a" />
+      </svg>
+    </div>
+    <div class="cta-card__badge">Next step</div>
+  </div>
+  <div class="cta-card__body">
+    <h4>Schedule your first Flink top-up</h4>
+    <p>Plan a mid-week produce delivery with Flink so fresh ingredients arrive right when recipes call for them.</p>
+  </div>
+  <div class="cta-card__actions">
+    <a class="cta-card__button" href="#flink-referral">
+      <span>Reveal the Flink code</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M6.75 17.25l9.5-9.5m0 0H9m7.25 0V15"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <p class="cta-card__note">Use the code during checkout for €15 off €30. Terms vary by city—check availability before ordering.</p>
+  </div>
+</div>
 
-Choose one planner-delivery combo today, set up your base recipes, and enjoy a week without grocery stress. Then bookmark SimplifyMyLife.app for more guides that help you **save time** and **make life easier**.
+## You might also be interested in
+
+- [Automating Household Bills with Smart Apps](/posts/automate-household-bills)
+- [Travel Simplification Tools for Stress-Free Trips](/posts/travel-simplification-tools)
+- [Subscription Managers to Stop Wasting Money](/posts/subscription-managers)

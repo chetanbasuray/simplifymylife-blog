@@ -143,10 +143,44 @@ Focus on three pillars: organising tabs, capturing knowledge, and automating rep
 - **Monitor privacy.** Check permission scopes regularly; revoke anything that feels excessive.
 - **Pair with focus tools.** Combine extensions with our [AI assistant workflows](/posts/ai-writing-assistants-workday) for even smoother days.
 
-## Conclusion
+## Final thoughts
 
 A curated extension stack keeps your browser responsive, organised, and ready for deep work. Take a few minutes to fine-tune it, and watch your day open up.
 
-## Call to Action
+<div class="cta-card">
+  <div class="cta-card__header">
+    <div class="cta-card__icon" aria-hidden="true">
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="#e0f2fe" />
+        <path d="M12 22h16v3H12zm3-6h10v3H15z" fill="#2563eb" />
+      </svg>
+    </div>
+    <div class="cta-card__badge">Next step</div>
+  </div>
+  <div class="cta-card__body">
+    <h4>Build a Workona workspace for deep work</h4>
+    <p>Group research, drafts, and dashboards in Workona or Arc Spaces so you can reopen focused sessions in seconds.</p>
+  </div>
+  <div class="cta-card__actions">
+    <a class="cta-card__button" href="https://workona.com/" target="_blank" rel="noopener noreferrer">
+      <span>Organise with Workona</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M6.75 17.25l9.5-9.5m0 0H9m7.25 0V15"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <p class="cta-card__note">Prefer built-in tools? Arc’s native Spaces and Firefox Containers offer similar separation.</p>
+  </div>
+</div>
 
-Install one new extension today, configure it properly, and note the minutes you save. Keep returning to SimplifyMyLife.app for more systems that **make life easier**.
+## You might also be interested in
+
+- [AI Writing Assistants to Simplify Your Workday](/posts/ai-writing-assistants-workday)
+- [Tools to Organise Your Digital Life](/posts/tools-organize-digital-life)
+- [Digital Decluttering Weekend Plan](/posts/digital-decluttering)

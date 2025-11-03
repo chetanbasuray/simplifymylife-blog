@@ -142,10 +142,44 @@ Think of your digital life as four pillars: capture, organise, secure, and autom
 - **Keep it portable.** Export Notion or Obsidian data quarterly for offline backups.
 - **Double down on decluttering.** Pair this system with our [digital declutter weekend](/posts/digital-decluttering) for best results.
 
-## Conclusion
+## Final thoughts
 
 A cohesive digital organisation system unlocks mental space, faster collaboration, and stronger privacy. Invest a few hours in the setup and it will serve you all year.
 
-## Call to Action
+<div class="cta-card">
+  <div class="cta-card__header">
+    <div class="cta-card__icon" aria-hidden="true">
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="#eef2ff" />
+        <path d="M12 22h16v3H12zm3-6h10v3H15z" fill="#4338ca" />
+      </svg>
+    </div>
+    <div class="cta-card__badge">Next step</div>
+  </div>
+  <div class="cta-card__body">
+    <h4>Secure your system with 1Password</h4>
+    <p>Create shared vaults, enable passkeys, and add biometric unlocks so your organised workspace stays protected.</p>
+  </div>
+  <div class="cta-card__actions">
+    <a class="cta-card__button" href="https://1password.com/" target="_blank" rel="noopener noreferrer">
+      <span>Try 1Password</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M6.75 17.25l9.5-9.5m0 0H9m7.25 0V15"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <p class="cta-card__note">Prefer open-source? Bitwarden delivers similar features with a generous free tier.</p>
+  </div>
+</div>
 
-Pick one pillar to improve this week—capture, organise, secure, or automate—and update your tools accordingly. Then keep browsing SimplifyMyLife.app for more routines that **make life easier**.
+## You might also be interested in
+
+- [Digital Decluttering Weekend Plan](/posts/digital-decluttering)
+- [Time-Saving Browser Extensions](/posts/time-saving-browser-extensions)
+- [AI Writing Assistants to Simplify Your Workday](/posts/ai-writing-assistants-workday)

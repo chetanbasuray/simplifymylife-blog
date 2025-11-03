@@ -150,10 +150,44 @@ Start with passive products that compound quietly, then add active projects you 
 - **Invest in skills.** Allocate a budget for courses or tools that make your active income more valuable.
 - **Plan for downtime.** Set passive streams to auto-withdraw into emergency funds.
 
-## Conclusion
+## Final thoughts
 
 A thoughtful mix of passive and active income transforms your finances without sacrificing sleep. Prioritise platforms that respect your data, deliver steady payouts, and fit into your lifestyle.
 
-## Call to Action
+<div class="cta-card">
+  <div class="cta-card__header">
+    <div class="cta-card__icon" aria-hidden="true">
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="#fefce8" />
+        <path d="M12 22h16v3H12zm3-6h10v3H15z" fill="#ca8a04" />
+      </svg>
+    </div>
+    <div class="cta-card__badge">Next step</div>
+  </div>
+  <div class="cta-card__body">
+    <h4>Stack your earning experiments</h4>
+    <p>Open our Freecash, Respondent, and Earnstar guides in tabs, then plan a 30-day sprint where you log hours and payouts.</p>
+  </div>
+  <div class="cta-card__actions">
+    <a class="cta-card__button" href="/posts/freecash-guide" target="_blank" rel="noopener noreferrer">
+      <span>Start with Freecash</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M6.75 17.25l9.5-9.5m0 0H9m7.25 0V15"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <p class="cta-card__note">Rotate in [Respondent](/posts/respondent-guide) interviews for higher payouts and [Superpayme](/posts/superpayme-guide) when you have 15-minute gaps.</p>
+  </div>
+</div>
 
-Pick one passive and one active idea from this list, test them for 30 days, and review your progress. Keep the wins, cut the noise, and explore more Simplify My Life guides to **make life easier** with every euro.
+## You might also be interested in
+
+- [Subscription Managers to Stop Wasting Money](/posts/subscription-managers)
+- [Automating Household Bills with Smart Apps](/posts/automate-household-bills)
+- [Online Banks and Fintechs in Europe](/posts/online-banks-fintechs-europe)

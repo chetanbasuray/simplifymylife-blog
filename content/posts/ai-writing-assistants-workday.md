@@ -167,10 +167,44 @@ Bringing an AI writing assistant into your workflow is easier than you think. Fo
 - **Rotate tools for best results.** DeepL Write excels at European language nuance, while Jasper shines for marketing frameworks. Mix and match per project.
 - **Stay human-centric.** AI should support, not replace, your judgment. Treat assistants as junior collaborators who always need a final review.
 
-## Conclusion
+## Final thoughts
 
 When deadlines are tight and expectations high, AI writing assistants act as calm, tireless copilots. They keep projects aligned, give you breathing room for deep work, and maintain a consistent voice across markets. With the right safeguards, they become a trusted extension of your team.
 
-## Call to Action
+<div class="cta-card">
+  <div class="cta-card__header">
+    <div class="cta-card__icon" aria-hidden="true">
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="#ecfeff" />
+        <path d="M12 16h16v3H12zm3 6h10v3H15z" fill="#0f766e" />
+      </svg>
+    </div>
+    <div class="cta-card__badge">Next step</div>
+  </div>
+  <div class="cta-card__body">
+    <h4>Create your AI playbook in Notion</h4>
+    <p>Duplicate Notion’s free AI policy template, customise review checkpoints, and share it with your team so every prompt stays compliant.</p>
+  </div>
+  <div class="cta-card__actions">
+    <a class="cta-card__button" href="https://www.notion.so/templates/ai-policy-playbook" target="_blank" rel="noopener noreferrer">
+      <span>Grab the template</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M6.75 17.25l9.5-9.5m0 0H9m7.25 0V15"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <p class="cta-card__note">We use the same framework to keep Simplify My Life’s AI experiments transparent and safe.</p>
+  </div>
+</div>
 
-Ready to **simplify your life** with smarter workflows? Test one assistant this week, document the time you save, and share your learnings with your team. Then keep exploring SimplifyMyLife.app for more guides that help you **make life easier** without burning out.
+## You might also be interested in
+
+- [Tools to Organise Your Digital Life](/posts/tools-organize-digital-life)
+- [Time-Saving Browser Extensions for Productivity](/posts/time-saving-browser-extensions)
+- [Digital Decluttering: How to Simplify Your Online Habits](/posts/digital-decluttering)

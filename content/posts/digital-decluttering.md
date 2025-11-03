@@ -158,10 +158,44 @@ Activate focus modes on iOS or Android, set Slack and Teams to deliver digests, 
 - **Share the win.** Sync the checklist with family or co-workers so everyone maintains the new system.
 - **Explore complementary guides.** Our [digital organization toolkit](/posts/tools-organize-digital-life) extends this routine with advanced workflows.
 
-## Conclusion
+## Final thoughts
 
 A tidy digital environment supports better focus, stronger security, and a calmer mind. Give yourself a weekend to reset, and every login will feel lighter.
 
-## Call to Action
+<div class="cta-card">
+  <div class="cta-card__header">
+    <div class="cta-card__icon" aria-hidden="true">
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="#eef2ff" />
+        <path d="M15 25l5-10 5 10" fill="none" stroke="#4338ca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+    <div class="cta-card__badge">Stay tidy</div>
+  </div>
+  <div class="cta-card__body">
+    <h4>Let Clean Email keep inboxes quiet automatically</h4>
+    <p>Set up Smart Folders and auto-clean rules so promotional clutter disappears while important messages surface on schedule.</p>
+  </div>
+  <div class="cta-card__actions">
+    <a class="cta-card__button" href="https://clean.email/" target="_blank" rel="noopener noreferrer">
+      <span>Automate your inbox</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M6.75 17.25l9.5-9.5m0 0H9m7.25 0V15"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <p class="cta-card__note">Prefer local storage? Use MailMate or Thunderbird filters—the key is maintaining the routine.</p>
+  </div>
+</div>
 
-Pick one session from the checklist, schedule it in your calendar, and celebrate the calm that follows. Then keep browsing SimplifyMyLife.app for more practical ways to **save time** and stay organised.
+## You might also be interested in
+
+- [Tools to Organise Your Digital Life](/posts/tools-organize-digital-life)
+- [Time-Saving Browser Extensions for Productivity](/posts/time-saving-browser-extensions)
+- [AI Writing Assistants to Simplify Your Workday](/posts/ai-writing-assistants-workday)

@@ -160,10 +160,44 @@ Secure a driver before you land with [Welcome Pickups](/go/welcome-pickups). The
 - **Pack smarter.** Combine this guide with our [digital declutter tips](/posts/digital-decluttering) to streamline travel tech.
 - **Reward stacking.** Pay bookings with multi-currency cards from [N26](/posts/n26-guide) or Revolut to avoid FX fees and earn perks.
 
-## Conclusion
+## Final thoughts
 
 A thoughtful travel stack keeps you ahead of surprises, from delayed flights to last-minute hotel changes. With the right tools and automations, every journey feels intentional.
 
-## Call to Action
+<div class="cta-card">
+  <div class="cta-card__header">
+    <div class="cta-card__icon" aria-hidden="true">
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="#e0f2fe" />
+        <path d="M12 22h16v3H12zm3-6h10v3H15z" fill="#2563eb" />
+      </svg>
+    </div>
+    <div class="cta-card__badge">Next step</div>
+  </div>
+  <div class="cta-card__body">
+    <h4>Lock in stress-free arrivals with Welcome Pickups</h4>
+    <p>Book your airport transfer now so a vetted driver tracks your flight and meets you with local tips on arrival.</p>
+  </div>
+  <div class="cta-card__actions">
+    <a class="cta-card__button" href="/go/welcome-pickups" target="_blank" rel="noopener noreferrer">
+      <span>Reserve your ride</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M6.75 17.25l9.5-9.5m0 0H9m7.25 0V15"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <p class="cta-card__note">Need coverage too? Pair it with [Ekta Travel Insurance](/go/ekta-travel-insurance) for full peace of mind.</p>
+  </div>
+</div>
 
-Set up your travel command centre today, run through the pre-trip checklist for your next adventure, and keep exploring SimplifyMyLife.app for more guides that **make life easier** wherever you roam.
+## You might also be interested in
+
+- [Meal Planning and Grocery Delivery Apps](/posts/meal-planning-grocery-delivery)
+- [Wise Review: Multi-Currency Money Toolkit](/posts/wise-guide)
+- [Automating Household Bills with Smart Apps](/posts/automate-household-bills)

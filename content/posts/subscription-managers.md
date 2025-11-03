@@ -158,10 +158,44 @@ Set thresholds to flag increases above 10%. It keeps you ready to contact suppor
 - **Keep receipts.** Save invoices in a cloud folder for tax season and warranty claims.
 - **Use virtual cards.** Generate disposable cards for trials via Revolut or Wise to avoid unwanted renewals.
 
-## Conclusion
+## Final thoughts
 
 Subscription managers give you clarity and control over recurring expenses. They shine a light on forgotten charges and turn budgeting into a proactive ritual.
 
-## Call to Action
+<div class="cta-card">
+  <div class="cta-card__header">
+    <div class="cta-card__icon" aria-hidden="true">
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="#fef2f2" />
+        <path d="M12 22h16v3H12zm3-6h10v3H15z" fill="#dc2626" />
+      </svg>
+    </div>
+    <div class="cta-card__badge">Next step</div>
+  </div>
+  <div class="cta-card__body">
+    <h4>Put your audit data to work</h4>
+    <p>Import the template into Emma or Moneyhub, then set automatic alerts whenever a subscription increases by more than 10%.</p>
+  </div>
+  <div class="cta-card__actions">
+    <a class="cta-card__button" href="https://emma-app.com/" target="_blank" rel="noopener noreferrer">
+      <span>Connect to Emma</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M6.75 17.25l9.5-9.5m0 0H9m7.25 0V15"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <p class="cta-card__note">Prefer a banking-native route? Turn on N26 Insights or Revolut Analytics for similar notifications.</p>
+  </div>
+</div>
 
-Connect a subscription manager today, cancel one unused service, and redirect that money toward a goal you value. Keep revisiting SimplifyMyLife.app for more ways to **save time** and **make life easier**.
+## You might also be interested in
+
+- [Automating Household Bills with Smart Apps](/posts/automate-household-bills)
+- [How to Earn Passive and Active Income Online Safely](/posts/passive-active-income-online)
+- [Tools to Organise Your Digital Life](/posts/tools-organize-digital-life)
