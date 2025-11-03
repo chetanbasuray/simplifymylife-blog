@@ -160,7 +160,7 @@ Secure a driver before you land with [Welcome Pickups](/go/welcome-pickups). The
 - **Pack smarter.** Combine this guide with our [digital declutter tips](/posts/digital-decluttering) to streamline travel tech.
 - **Reward stacking.** Pay bookings with multi-currency cards from [N26](/posts/n26-guide) or Revolut to avoid FX fees and earn perks.
 
-## Final thoughts
+### Final thoughts
 
 A thoughtful travel stack keeps you ahead of surprises, from delayed flights to last-minute hotel changes. With the right tools and automations, every journey feels intentional.
 
@@ -196,8 +196,3 @@ A thoughtful travel stack keeps you ahead of surprises, from delayed flights to 
   </div>
 </div>
 
-## You might also be interested in
-
-- [Meal Planning and Grocery Delivery Apps](/posts/meal-planning-grocery-delivery)
-- [Wise Review: Multi-Currency Money Toolkit](/posts/wise-guide)
-- [Automating Household Bills with Smart Apps](/posts/automate-household-bills)

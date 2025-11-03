@@ -142,7 +142,7 @@ Think of your digital life as four pillars: capture, organise, secure, and autom
 - **Keep it portable.** Export Notion or Obsidian data quarterly for offline backups.
 - **Double down on decluttering.** Pair this system with our [digital declutter weekend](/posts/digital-decluttering) for best results.
 
-## Final thoughts
+### Final thoughts
 
 A cohesive digital organisation system unlocks mental space, faster collaboration, and stronger privacy. Invest a few hours in the setup and it will serve you all year.
 
@@ -178,8 +178,3 @@ A cohesive digital organisation system unlocks mental space, faster collaboratio
   </div>
 </div>
 
-## You might also be interested in
-
-- [Digital Decluttering Weekend Plan](/posts/digital-decluttering)
-- [Time-Saving Browser Extensions](/posts/time-saving-browser-extensions)
-- [AI Writing Assistants to Simplify Your Workday](/posts/ai-writing-assistants-workday)

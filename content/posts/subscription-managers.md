@@ -158,7 +158,7 @@ Set thresholds to flag increases above 10%. It keeps you ready to contact suppor
 - **Keep receipts.** Save invoices in a cloud folder for tax season and warranty claims.
 - **Use virtual cards.** Generate disposable cards for trials via Revolut or Wise to avoid unwanted renewals.
 
-## Final thoughts
+### Final thoughts
 
 Subscription managers give you clarity and control over recurring expenses. They shine a light on forgotten charges and turn budgeting into a proactive ritual.
 
@@ -194,8 +194,3 @@ Subscription managers give you clarity and control over recurring expenses. They
   </div>
 </div>
 
-## You might also be interested in
-
-- [Automating Household Bills with Smart Apps](/posts/automate-household-bills)
-- [How to Earn Passive and Active Income Online Safely](/posts/passive-active-income-online)
-- [Tools to Organise Your Digital Life](/posts/tools-organize-digital-life)

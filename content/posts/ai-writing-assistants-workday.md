@@ -167,7 +167,7 @@ Bringing an AI writing assistant into your workflow is easier than you think. Fo
 - **Rotate tools for best results.** DeepL Write excels at European language nuance, while Jasper shines for marketing frameworks. Mix and match per project.
 - **Stay human-centric.** AI should support, not replace, your judgment. Treat assistants as junior collaborators who always need a final review.
 
-## Final thoughts
+### Final thoughts
 
 When deadlines are tight and expectations high, AI writing assistants act as calm, tireless copilots. They keep projects aligned, give you breathing room for deep work, and maintain a consistent voice across markets. With the right safeguards, they become a trusted extension of your team.
 
@@ -203,8 +203,3 @@ When deadlines are tight and expectations high, AI writing assistants act as cal
   </div>
 </div>
 
-## You might also be interested in
-
-- [Tools to Organise Your Digital Life](/posts/tools-organize-digital-life)
-- [Time-Saving Browser Extensions for Productivity](/posts/time-saving-browser-extensions)
-- [Digital Decluttering: How to Simplify Your Online Habits](/posts/digital-decluttering)

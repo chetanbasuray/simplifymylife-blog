@@ -150,7 +150,7 @@ Start with passive products that compound quietly, then add active projects you 
 - **Invest in skills.** Allocate a budget for courses or tools that make your active income more valuable.
 - **Plan for downtime.** Set passive streams to auto-withdraw into emergency funds.
 
-## Final thoughts
+### Final thoughts
 
 A thoughtful mix of passive and active income transforms your finances without sacrificing sleep. Prioritise platforms that respect your data, deliver steady payouts, and fit into your lifestyle.
 
@@ -186,8 +186,3 @@ A thoughtful mix of passive and active income transforms your finances without s
   </div>
 </div>
 
-## You might also be interested in
-
-- [Subscription Managers to Stop Wasting Money](/posts/subscription-managers)
-- [Automating Household Bills with Smart Apps](/posts/automate-household-bills)
-- [Online Banks and Fintechs in Europe](/posts/online-banks-fintechs-europe)

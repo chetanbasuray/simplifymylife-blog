@@ -158,7 +158,7 @@ Activate focus modes on iOS or Android, set Slack and Teams to deliver digests, 
 - **Share the win.** Sync the checklist with family or co-workers so everyone maintains the new system.
 - **Explore complementary guides.** Our [digital organization toolkit](/posts/tools-organize-digital-life) extends this routine with advanced workflows.
 
-## Final thoughts
+### Final thoughts
 
 A tidy digital environment supports better focus, stronger security, and a calmer mind. Give yourself a weekend to reset, and every login will feel lighter.
 
@@ -194,8 +194,3 @@ A tidy digital environment supports better focus, stronger security, and a calme
   </div>
 </div>
 
-## You might also be interested in
-
-- [Tools to Organise Your Digital Life](/posts/tools-organize-digital-life)
-- [Time-Saving Browser Extensions for Productivity](/posts/time-saving-browser-extensions)
-- [AI Writing Assistants to Simplify Your Workday](/posts/ai-writing-assistants-workday)

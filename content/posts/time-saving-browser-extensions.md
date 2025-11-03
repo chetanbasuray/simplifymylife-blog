@@ -143,7 +143,7 @@ Focus on three pillars: organising tabs, capturing knowledge, and automating rep
 - **Monitor privacy.** Check permission scopes regularly; revoke anything that feels excessive.
 - **Pair with focus tools.** Combine extensions with our [AI assistant workflows](/posts/ai-writing-assistants-workday) for even smoother days.
 
-## Final thoughts
+### Final thoughts
 
 A curated extension stack keeps your browser responsive, organised, and ready for deep work. Take a few minutes to fine-tune it, and watch your day open up.
 
@@ -179,8 +179,3 @@ A curated extension stack keeps your browser responsive, organised, and ready fo
   </div>
 </div>
 
-## You might also be interested in
-
-- [AI Writing Assistants to Simplify Your Workday](/posts/ai-writing-assistants-workday)
-- [Tools to Organise Your Digital Life](/posts/tools-organize-digital-life)
-- [Digital Decluttering Weekend Plan](/posts/digital-decluttering)

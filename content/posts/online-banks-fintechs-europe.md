@@ -186,7 +186,7 @@ Connect your favourite accounting software, export statements in a click, or aut
 - **Add travel protection.** Pair your cards with [Ekta’s travel insurance](/go/ekta-travel-insurance) and [Welcome Pickups transfers](/go/welcome-pickups) from our travel guide for seamless trips.
 - **Explore savings options.** Many fintechs now offer high-yield vaults or partner deposits. Compare rates with local banks before moving large balances.
 
-## Final thoughts
+### Final thoughts
 
 Managing money across borders and currencies no longer has to be a chore. With the right mix of European neobanks and fintech platforms, you can consolidate accounts, reduce fees, and stay on top of your budget from your phone. The key is to experiment with the features that help you **save time** and keep what matters most front and centre.
 
@@ -222,8 +222,3 @@ Managing money across borders and currencies no longer has to be a chore. With t
   </div>
 </div>
 
-## You might also be interested in
-
-- [N26 Review: Streamlined Mobile Banking](/posts/n26-guide)
-- [Wise Review: Multi-Currency Money Toolkit](/posts/wise-guide)
-- [Automating Household Bills with Smart Apps](/posts/automate-household-bills)
