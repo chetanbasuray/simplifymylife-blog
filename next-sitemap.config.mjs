@@ -1,6 +1,6 @@
-const fs = require("fs");
-const path = require("path");
-const matter = require("gray-matter");
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
 function parseDate(value) {
   if (!value) {
@@ -24,14 +24,14 @@ function readPostEntries(postsDir) {
         try {
           const { data } = matter(fileContent);
           lastmod = parseDate(data?.date);
-        } catch (error) {
-          // If parsing fails, fall back to filesystem metadata below.
+        } catch {
+          // fall back to filesystem metadata
         }
 
         if (!lastmod) {
           try {
             lastmod = fs.statSync(filePath).mtime.toISOString();
-          } catch (statError) {
+          } catch {
             lastmod = new Date().toISOString();
           }
         }
@@ -43,13 +43,13 @@ function readPostEntries(postsDir) {
           priority: 0.7,
         };
       });
-  } catch (error) {
+  } catch {
     return [];
   }
 }
 
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
+const config = {
   siteUrl: "https://blog.simplifymylife.app",
   generateRobotsTxt: true,
   sitemapSize: 7000,
@@ -82,3 +82,5 @@ module.exports = {
     return readPostEntries(postsDir);
   },
 };
+
+export default config;
