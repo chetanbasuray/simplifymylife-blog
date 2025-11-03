@@ -5,6 +5,7 @@ import { marked } from "marked";
 import Link from "next/link";
 import Image from "next/image";
 import { headers } from "next/headers";
+import { replaceSnippetPlaceholders } from "@/lib/snippets";
 
 export const dynamic = "force-dynamic";
 
@@ -163,7 +164,8 @@ export default async function BlogPost({ params }) {
   const filePath = path.join(process.cwd(), "content/posts", `${slug}.md`);
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContent);
-  const htmlContent = marked(content);
+  const contentWithSnippets = replaceSnippetPlaceholders(content);
+  const htmlContent = marked(contentWithSnippets);
   const visitorCountryName = await resolveVisitorCountryName();
   const generalTags = Array.isArray(data.tags) ? data.tags : [];
   const countryTags = Array.isArray(data.countryTags) ? data.countryTags : [];

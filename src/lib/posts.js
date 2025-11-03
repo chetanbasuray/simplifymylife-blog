@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
+import { replaceSnippetPlaceholders } from "./snippets";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 
@@ -42,8 +43,9 @@ export function getSortedPostsData() {
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const matterResult = matter(fileContents);
+      const processedContent = replaceSnippetPlaceholders(matterResult.content);
 
-      const time = readingTime(matterResult.content);
+      const time = readingTime(processedContent);
       const publishDate = matterResult.data.date
         ? new Date(matterResult.data.date)
         : null;
@@ -79,12 +81,13 @@ export async function getPostData(slug) {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
-  const time = readingTime(matterResult.content);
+  const processedContent = replaceSnippetPlaceholders(matterResult.content);
+  const time = readingTime(processedContent);
 
   return {
     slug,
     ...matterResult.data,
     readingTime: time.text,
-    content: matterResult.content,
+    content: processedContent,
   };
 }
