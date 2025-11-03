@@ -56,7 +56,7 @@ Managing money shouldn’t require detective work. Yet many Europeans still jugg
 
 After years of travelling between Lisbon, Berlin, and Tallinn, I finally adopted a “best-of” approach: Wise for cross-border invoices, [N26 for everyday banking](/posts/n26-guide), and Revolut for travel extras. The mix keeps my fees low and my budget transparent. Below you’ll find the same blueprint adapted for your needs.
 
-## The Solution: Build a Modular Fintech Toolkit
+### The Solution: Build a Modular Fintech Toolkit
 
 Neobanks combine slick mobile apps with generous free tiers, making it easy to spin up accounts across Europe. Mix them based on the jobs you need done—payments, savings, expense tracking, travel insurance—and you’ll enjoy automation without losing oversight.
 
@@ -138,7 +138,7 @@ Neobanks combine slick mobile apps with generous free tiers, making it easy to s
   </div>
 </section>
 
-## Meet the Heavyweights Simplifying Your Finances
+### Meet the Heavyweights Simplifying Your Finances
 
 Below are four standout services that help you **save time** while keeping your money secure. Dive into individual reviews for advanced tips, but start with this snapshot:
 
@@ -149,29 +149,29 @@ Below are four standout services that help you **save time** while keeping your 
 | [N26](/posts/n26-guide) | Mobile-first current accounts | Intuitive interface, Spaces sub-accounts, fee-free card payments worldwide | Available in select EU markets; cash deposits limited |
 | Bunq | Ethical, eco-friendly banking | Real-time notifications, automatic budgeting, tree-planting program, joint accounts | Premium pricing, but includes multiple IBANs and travel card |
 
-## Key Features That Make These Apps Worth It
+### Key Features That Make These Apps Worth It
 
-### 1. Multi-currency superpowers
+#### 1. Multi-currency superpowers
 
 Whether you invoice clients abroad or love city breaks, multi-currency accounts remove the stress of exchange rates. Wise and Revolut let you hold and convert dozens of currencies at transparent rates, and you can pay like a local without mystery fees.
 
-### 2. Budgeting that sticks
+#### 2. Budgeting that sticks
 
 Digital banks make budgeting visual and automatic. [N26’s Spaces](/posts/n26-guide) and Bunq’s sub-accounts help you earmark cash for rent, bills, and holidays. Revolut’s analytics categorise spending instantly, so you can cut back on subscriptions before they renew.
 
-### 3. Smart security without the hassle
+#### 3. Smart security without the hassle
 
 Push notifications, one-tap card freezing, and biometric logins keep your money safe without extra gadgets. Bunq even lets you create disposable virtual cards for online shopping, while Wise offers two-factor authentication by default.
 
-### 4. Travel perks for the win
+#### 4. Travel perks for the win
 
 From airport lounge passes to travel insurance, fintech banks sweeten your trips. Revolut Premium and Metal members get insurance coverage, while Bunq’s Travel Card is designed to work worldwide without foreign transaction fees. Even on the free tiers, you’ll usually get better FX rates than legacy banks offer.
 
-### 5. Integrations and automations
+#### 5. Integrations and automations
 
 Connect your favourite accounting software, export statements in a click, or automate bill payments. Wise’s batch payments are a lifesaver for freelancers, and N26 integrates with apps like MoneyBeam for instant transfers between friends.
 
-## How to Get Started and Simplify Your Banking
+### How to Get Started and Simplify Your Banking
 
 1. **Map your needs.** List where you spend, the currencies you use, and whether you need business features.
 2. **Compare plans.** Review free vs. paid tiers. Revolut’s free account covers the basics, while N26 Smart or Metal and Bunq Easy Money unlock extra automation.
@@ -179,7 +179,7 @@ Connect your favourite accounting software, export statements in a click, or aut
 4. **Set up your payments.** Update direct debits, salary deposits, and recurring subscriptions to your new IBAN. Use features like Spaces or sub-accounts to separate bills from spending.
 5. **Automate and monitor.** Enable instant notifications, schedule savings transfers, and use in-app analytics to track your progress.
 
-## Tips, Combos, and Smart Alternatives
+### Tips, Combos, and Smart Alternatives
 
 - **Mix and match.** Combine Wise for cross-border invoices with [N26 for everyday banking](/posts/n26-guide) so you get the best of both worlds.
 - **Stay compliant.** Update your address when moving countries to avoid account freezes. Digital banks remain strict about Know Your Customer (KYC) rules.

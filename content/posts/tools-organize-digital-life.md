@@ -38,7 +38,7 @@ Digital clutter creeps up slowly—loose notes, forgotten bookmarks, half-writte
 
 Over the past decade I’ve tried every combination of note apps and bookmarking tools. The setup below finally stuck because it balances structure with flexibility. Let’s walk through it step by step.
 
-## The Solution: Four Pillars of Digital Calm
+### The Solution: Four Pillars of Digital Calm
 
 Think of your digital life as four pillars: capture, organise, secure, and automate. Choose tools for each, and you’ll create a system that scales with your ambitions.
 
@@ -120,14 +120,14 @@ Think of your digital life as four pillars: capture, organise, secure, and autom
   </div>
 </section>
 
-## Key Tools by Pillar
+### Key Tools by Pillar
 
 1. **Capture.** Use Drafts, Apple Notes, or Google Keep for quick capture. Send everything to Notion or Obsidian once a day.
 2. **Organise.** Raindrop.io structures bookmarks with tags and collections; Notion databases link tasks to notes and resources.
 3. **Secure.** 1Password stores logins, bank details, and shared vaults. Enable passkeys where available.
 4. **Automate.** Zapier or Make routes highlights from Readwise Reader into your knowledge base and turns emails into tasks.
 
-## How to Get Started
+### How to Get Started
 
 1. **Audit current tools.** Keep only one app per pillar to avoid duplication.
 2. **Define naming conventions.** Use prefixes like “2025-ProjectName” to keep folders consistent.
@@ -135,7 +135,7 @@ Think of your digital life as four pillars: capture, organise, secure, and autom
 4. **Secure access.** Turn on multi-factor authentication for every account and share vaults with family members responsibly.
 5. **Document workflows.** Create a short SOP so you remember how notes flow from capture to archive.
 
-## Tips and Alternatives
+### Tips and Alternatives
 
 - **Use device widgets.** Place quick-capture buttons on your phone’s home screen.
 - **Sync with calendar.** Send important notes to your calendar for context during meetings.

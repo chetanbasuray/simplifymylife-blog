@@ -40,7 +40,7 @@ Travel should feel like a reward—not a juggling act. Yet many itineraries star
 
 From Lisbon weekends to Tallinn workcations, I rely on the same stack outlined below. It keeps bookings in sync, ensures I’m insured, and gets me from airport to accommodation without stress.
 
-## The Solution: A Connected Travel Stack
+### The Solution: A Connected Travel Stack
 
 Build a stack that covers three phases—plan, book, go. Each tool should hand off data to the next so you stay informed without re-entering details.
 
@@ -122,13 +122,13 @@ Build a stack that covers three phases—plan, book, go. Each tool should hand o
   </div>
 </section>
 
-## Plan: Research and Budget Smartly
+### Plan: Research and Budget Smartly
 
 - **Centralise research.** Use Notion or Wanderlog to capture ideas, budgets, and visa requirements. Sync with your calendar.
 - **Forecast currency needs.** Track exchange rates via [Wise](/posts/wise-guide) and set alerts for favourable rates.
 - **Insurance first.** Lock in coverage through [Ekta Travel Insurance](/go/ekta-travel-insurance) so medical and trip disruptions are covered from day one.
 
-## Book: Flights, Stays, and Transfers in Minutes
+### Book: Flights, Stays, and Transfers in Minutes
 
 ### Flights
 
@@ -146,14 +146,14 @@ Compare boutique stays and apartment rentals with the Trip.com hotel widget. Sav
 
 Secure a driver before you land with [Welcome Pickups](/go/welcome-pickups). Their flight monitoring ensures pickups adjust to delays, and you can book city tours with the same app.
 
-## Go: Smooth Arrivals and On-the-Ground Support
+### Go: Smooth Arrivals and On-the-Ground Support
 
 - **Digital wallets ready.** Add cards to Apple Pay or Google Pay before departure and download offline maps.
 - **Trip documents synced.** Store PDFs in your travel dashboard and share them with companions.
 - **Emergency coverage.** Keep the [Ekta policy portal](/go/ekta-travel-insurance) bookmarked for quick access to claims or support numbers.
 - **Airport rides sorted.** Confirm your [Welcome Pickups](/go/welcome-pickups) driver 24 hours before arrival and share the live link with your travel buddy.
 
-## Tips and Alternatives
+### Tips and Alternatives
 
 - **Automate expenses.** Sync receipts to Notion or expensing tools using Zapier so reimbursements take minutes.
 - **Stay connected.** Use eSIM services like Airalo to avoid roaming surprises.

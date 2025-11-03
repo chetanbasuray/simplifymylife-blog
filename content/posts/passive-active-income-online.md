@@ -39,7 +39,7 @@ Online income should feel empowering—not risky or overwhelming. Yet many peopl
 
 Over the past year, I tested dozens of platforms for Simplify My Life. The short list below earned a permanent spot in my routine because they respect your time and data. Pair them thoughtfully and you’ll create a resilient income mix.
 
-## The Solution: Layer Passive Foundations with Active Upside
+### The Solution: Layer Passive Foundations with Active Upside
 
 Start with passive products that compound quietly, then add active projects you enjoy. This combination keeps stress low while giving you options to scale when time allows.
 
@@ -121,21 +121,21 @@ Start with passive products that compound quietly, then add active projects you 
   </div>
 </section>
 
-## Passive Income Ideas Worth Considering
+### Passive Income Ideas Worth Considering
 
 1. **High-yield savings accounts.** Many European fintechs now offer competitive interest with full deposit protection. Check your residency requirements before opening.
 2. **Robo-advisors.** Platforms like Scalable Capital or Nutmeg build diversified portfolios and rebalance automatically.
 3. **Peer-to-peer lending.** Use vetted marketplaces (Mintos, Bondora) and diversify across loan grades.
 4. **Digital products.** Turn templates, mini-courses, or stock photos into low-maintenance assets hosted on Gumroad or Etsy.
 
-## Active Income Streams That Respect Your Time
+### Active Income Streams That Respect Your Time
 
 1. **User research panels.** Try [Respondent](/posts/respondent-guide) or [GLG](/posts/glg-research-guide) for expert interviews.
 2. **Offer wall platforms.** [Freecash](/posts/freecash-guide), [Superpayme](/posts/superpayme-guide), and [TopSurveys](/posts/topsurveys-guide) reward quick micro-tasks.
 3. **Freelancing platforms.** Toptal, Malt, and Upwork connect you with remote clients—start with scoped packages to avoid scope creep.
 4. **Community building.** Host paid newsletters via Substack or Beehiiv, or sell sponsorship slots in niche Discord groups.
 
-## How to Get Started Safely
+### How to Get Started Safely
 
 1. **Set your goal.** Decide whether you’re covering a bill, funding travel, or building a long-term asset.
 2. **Audit your resources.** List skills, available hours, and initial capital.
@@ -143,7 +143,7 @@ Start with passive products that compound quietly, then add active projects you 
 4. **Protect yourself.** Use password managers, two-factor authentication, and dedicated email addresses for each platform.
 5. **Track and optimise.** Keep a simple spreadsheet of hours invested versus returns. Reallocate your time every month.
 
-## Tips and Alternatives
+### Tips and Alternatives
 
 - **Mind local taxes.** Save receipts, download transaction histories, and set aside a percentage for tax obligations.
 - **Diversify payment methods.** Use multi-currency accounts like [Wise](/posts/wise-guide) to avoid conversion fees on payouts.

@@ -40,7 +40,7 @@ Keeping tabs on your money should feel as simple as checking your messages. Yet 
 
 I opened my account while planning a move from Lisbon to Berlin. Within minutes I had a German IBAN, real-time notifications, and sub-accounts earmarked for rent, travel, and taxes. Over the years, N26 has remained my reliable daily driver because it balances automation with intuitive controls.
 
-## The Solution: A Truly Mobile European Bank
+### The Solution: A Truly Mobile European Bank
 
 N26 was designed for people who live online: remote workers, frequent travellers, and anyone tired of queuing for basic services. With instant account opening, real-time notifications, and Mastercard debit cards that work worldwide, the platform helps you **make life easier** whether you are at home or hopping between EU capitals.
 
@@ -122,29 +122,29 @@ N26 was designed for people who live online: remote workers, frequent travellers
   </div>
 </section>
 
-## Key Features and Benefits
+### Key Features and Benefits
 
-### 1. Fast, paperless onboarding
+#### 1. Fast, paperless onboarding
 
 Sign up with your ID, a short video verification, and a selfie. Your virtual card is ready instantly, and a physical Mastercard ships within days.
 
-### 2. Spaces and shared accounts
+#### 2. Spaces and shared accounts
 
 Use Spaces to separate rent, savings, and business expenses. Invite partners or roommates to shared sub-accounts and manage contributions transparently.
 
-### 3. Built-in budgeting
+#### 3. Built-in budgeting
 
 N26 categorises spending automatically and alerts you when recurring charges hit. Use Insights to spot trends and adjust budgets before month-end.
 
-### 4. Security at your fingertips
+#### 4. Security at your fingertips
 
 Freeze and unfreeze cards in the app, set daily limits, and enable biometric logins. Two-factor authentication is built in.
 
-### 5. European support
+#### 5. European support
 
 Multilingual chat and phone support, local IBANs in major markets, and Apple Pay/Google Pay support make N26 a strong base for travellers.
 
-## How to Get Started with N26
+### How to Get Started with N26
 
 1. **Check availability.** Ensure N26 operates in your country of residence—most Eurozone members are covered.
 2. **Gather documents.** Have your passport or national ID ready along with proof of address.
@@ -152,7 +152,7 @@ Multilingual chat and phone support, local IBANs in major markets, and Apple Pay
 4. **Create Spaces.** Set up sub-accounts for key goals and enable automatic transfers on payday.
 5. **Connect your toolkit.** Link N26 with expense apps like Moneyhub, or pair it with [Wise](/posts/wise-guide) for cross-border transfers.
 
-## Tips and Alternatives
+### Tips and Alternatives
 
 - **Upgrade strategically.** The Smart plan adds virtual cards and shared Spaces; Metal adds travel insurance and partner offers.
 - **Use N26 with other fintechs.** Combine it with [Revolut](/posts/revolut-guide) for perks and [Wise](/posts/wise-guide) for FX savings.

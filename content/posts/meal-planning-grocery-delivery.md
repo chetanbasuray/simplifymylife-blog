@@ -38,7 +38,7 @@ Even if you love cooking, the “What’s for dinner?” question can derail the
 
 I fine-tuned this system while balancing a hybrid work schedule in Amsterdam. With three recurring meetings every evening, we needed quick recipes, accurate deliveries, and zero grocery surprises. The workflow below has been battle-tested across seasons.
 
-## The Solution: Pair Planning Apps with Fast Delivery
+### The Solution: Pair Planning Apps with Fast Delivery
 
 Meal planning tools take your favourite recipes, calculate shopping lists, and export tasks to calendars. Delivery apps fulfil those lists on your schedule. Together, they eliminate emergency supermarket runs and reduce food waste.
 
@@ -120,29 +120,29 @@ Meal planning tools take your favourite recipes, calculate shopping lists, and e
   </div>
 </section>
 
-## Key Features and Benefits
+### Key Features and Benefits
 
-### 1. Recipe libraries that adapt to your diet
+#### 1. Recipe libraries that adapt to your diet
 
 Apps like Plan to Eat, PlateJoy, or Paprika store favourite recipes and adjust servings automatically. Tag them for vegetarian weeks, batch cooking, or low-fuss lunches.
 
-### 2. Automated shopping lists
+#### 2. Automated shopping lists
 
 Meal planners export curated shopping lists grouped by category. Import them into delivery apps like Flink, Gorillas, or your supermarket for faster checkout.
 
-### 3. Nutritional insights
+#### 3. Nutritional insights
 
 Tools such as Cronometer or MyFitnessPal connect with meal plans to surface macros and allergen alerts, ideal for families managing dietary needs.
 
-### 4. Delivery reliability
+#### 4. Delivery reliability
 
 Look for services with real-time tracking, substitution preferences, and multi-language support for European cities. Many apps integrate with Apple Pay or Google Pay for quick confirmation.
 
-### 5. Waste reduction
+#### 5. Waste reduction
 
 Set recurring reminders to use leftovers. Apps like Too Good To Go or Motatos help you rescue surplus produce and cut grocery bills.
 
-## How to Get Started
+### How to Get Started
 
 1. **Pick your planner.** Trial two apps and keep the one with the smoothest recipe import experience.
 2. **Build a base menu.** Create five go-to dinners, two lunches, and snack options you can rotate weekly.
@@ -150,7 +150,7 @@ Set recurring reminders to use leftovers. Apps like Too Good To Go or Motatos he
 4. **Automate delivery.** Schedule weekly grocery drops and add same-day top-ups for fresh items.
 5. **Review on Sundays.** Check pantry levels, adjust servings, and plan themed nights to keep variety.
 
-## Tips and Alternatives
+### Tips and Alternatives
 
 - **Use breakfast bundles.** Automate staple items (oats, yogurt, fruit) via supermarket subscriptions.
 - **Plan for travel.** Pause deliveries during trips and rely on our [travel simplification guide](/posts/travel-simplification-tools) for smart dining on the road.

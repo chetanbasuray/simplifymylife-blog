@@ -39,7 +39,7 @@ Our laptops and phones should feel like tidy studios, not junk drawers. Yet most
 
 I run a quarterly declutter weekend with a playlist, a pot of tea, and a shared checklist. The transformation is immediate: laptops boot faster, my browser stops nagging me to update extensions, and I feel ready for deep work again. Let’s walk through the same routine so you can enjoy that fresh-start feeling too.
 
-## The Solution: A Two-Session Reset
+### The Solution: A Two-Session Reset
 
 The Simplify My Life method splits decluttering into two focused sessions so you can maintain momentum without burnout.
 
@@ -121,29 +121,29 @@ The Simplify My Life method splits decluttering into two focused sessions so you
   </div>
 </section>
 
-## Key Features and Benefits
+### Key Features and Benefits
 
-### 1. Inbox sanity
+#### 1. Inbox sanity
 
 Start with Clean Email or SaneBox to bundle newsletters and auto-delete expired alerts. Create filters for receipts and travel confirmations so they land in dedicated folders you review weekly.
 
-### 2. File harmony
+#### 2. File harmony
 
 Use Hazel on macOS or File Juggler on Windows to move screenshots, invoices, and downloads into tidy folders based on naming rules. Cloud storage apps now include built-in duplicate finders—run them monthly.
 
-### 3. Password hygiene
+#### 3. Password hygiene
 
 Update to 1Password or Bitwarden, enable passkeys where available, and audit shared vaults. Clear out ex-colleague access while you’re at it.
 
-### 4. App and extension pruning
+#### 4. App and extension pruning
 
 Review your phone and browser: uninstall unused apps, disable noisy extensions, and group remaining tools by purpose. Less clutter means faster devices.
 
-### 5. Notification zen
+#### 5. Notification zen
 
 Activate focus modes on iOS or Android, set Slack and Teams to deliver digests, and silence anything that doesn’t support your top priorities.
 
-## How to Get Started
+### How to Get Started
 
 1. **Block two sessions.** Schedule a Saturday morning and Sunday afternoon sprint.
 2. **Gather tools.** Install Clean Email, a password manager, and your chosen automation helper beforehand.
@@ -151,7 +151,7 @@ Activate focus modes on iOS or Android, set Slack and Teams to deliver digests, 
 4. **Tackle security.** Enable multi-factor authentication everywhere and rotate important passwords.
 5. **Rebuild routines.** Set weekly reminders to file receipts, inbox-zero your newsletters, and review notifications.
 
-## Tips and Alternatives
+### Tips and Alternatives
 
 - **Pair with physical decluttering.** Sort desk drawers while large backups run.
 - **Try a focus timer.** Use Pomodoro blocks to keep the weekend fun, not draining.

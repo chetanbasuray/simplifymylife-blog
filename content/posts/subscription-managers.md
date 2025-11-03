@@ -39,7 +39,7 @@ The average European household pays for more than a dozen recurring services. It
 
 I used to track subscriptions in a spreadsheet. It worked until I moved countries and switched currencies. Modern tools made the job effortless—they import transactions, highlight duplicates, and nudge me before renewals. Here’s how to replicate that peace of mind.
 
-## The Solution: Pair Banking Insights with Dedicated Apps
+### The Solution: Pair Banking Insights with Dedicated Apps
 
 Many neobanks now surface subscriptions automatically. Pair those insights with specialised apps that handle negotiation, cancellation, and budgeting, and you’ll never miss a renewal again.
 
@@ -121,29 +121,29 @@ Many neobanks now surface subscriptions automatically. Pair those insights with 
   </div>
 </section>
 
-## Key Features and Benefits
+### Key Features and Benefits
 
-### 1. Real-time detection
+#### 1. Real-time detection
 
 Banking integrations identify recurring charges within days, not weeks. You’ll know immediately when a trial switches to paid.
 
-### 2. Cancellation support
+#### 2. Cancellation support
 
 Apps like Rocket Money negotiate on your behalf, while DoNotPay offers scripted emails and letters to cancel stubborn services.
 
-### 3. Budget reassignment
+#### 3. Budget reassignment
 
 Once a subscription ends, reassign its monthly cost to savings goals or debt repayments automatically.
 
-### 4. Shared visibility
+#### 4. Shared visibility
 
 Invite family or teammates to view dashboards so everyone sees the impact of cancellations and renewals.
 
-### 5. Alerts for price hikes
+#### 5. Alerts for price hikes
 
 Set thresholds to flag increases above 10%. It keeps you ready to contact support or switch providers immediately.
 
-## How to Get Started
+### How to Get Started
 
 1. **Connect your accounts.** Add bank and card connections through open-banking compliant providers.
 2. **Tag everything.** Spend 15 minutes confirming which charges are subscriptions, utilities, or one-offs.
@@ -151,7 +151,7 @@ Set thresholds to flag increases above 10%. It keeps you ready to contact suppor
 4. **Negotiate or cancel.** Use scripts or call providers armed with your usage data.
 5. **Reinvest savings.** Move freed-up cash into emergency funds or investments the same day a subscription ends.
 
-## Tips and Alternatives
+### Tips and Alternatives
 
 - **Pair with bill automation.** See our [bill automation guide](/posts/automate-household-bills) to streamline fixed costs further.
 - **Monitor annual plans.** If you prefer yearly billing, set reminders 45 days in advance so you can switch or downgrade.

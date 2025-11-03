@@ -38,7 +38,7 @@ Every household knows the dread of bill week: invoices to review, due dates to j
 
 When my partner and I moved from Lisbon to Berlin, we suddenly had energy contracts in German, broadband in Portuguese, and banking split across two countries. Automating everything with a combination of Tink-enabled banking alerts and Papernest onboarding cut our admin time by half. More importantly, it meant no more “Did you pay the gas bill?” pings at midnight.
 
-## The Solution: Let Apps Monitor, Pay, and Optimise
+### The Solution: Let Apps Monitor, Pay, and Optimise
 
 Bill automation tools connect to your bank accounts, utility dashboards, and subscription services. They categorise payments, predict cash flow, and raise a flag whenever something changes. Many European neobanks—like [N26](/posts/n26-guide) and Revolut—offer native bill splitting and scheduled transfers. Specialist platforms such as Moneyhub or Snoop plug into open banking APIs to monitor dozens of providers, while switching services like Papernest or Tariffly negotiate better energy and broadband tariffs for you.
 
@@ -120,29 +120,29 @@ Bill automation tools connect to your bank accounts, utility dashboards, and sub
   </div>
 </section>
 
-## Key Features and Benefits
+### Key Features and Benefits
 
-### 1. Centralised dashboards
+#### 1. Centralised dashboards
 
 Apps like Moneyhub or Snoop pull transactions from multiple bank accounts via open banking. They categorise utilities, rent, and subscriptions so you have a single timeline for everything due.
 
-### 2. Automated switching
+#### 2. Automated switching
 
 Platforms such as Papernest and SwitchUp compare energy and broadband rates, then handle the paperwork when you switch. A quick digital signature is often all you need to lock in better prices.
 
-### 3. Smart reminders and buffers
+#### 3. Smart reminders and buffers
 
 Set rules so you get alerted five days before a bill exceeds your typical spend. Some apps even suggest a savings transfer to cushion seasonal spikes.
 
-### 4. Shared visibility
+#### 4. Shared visibility
 
 Roommates or partners can log in to shared dashboards. Everyone sees status updates without forwarding PDFs or chasing email confirmations.
 
-### 5. Expense insights
+#### 5. Expense insights
 
 Bill automation tools export data to budgeting apps like YNAB or Emma, making it easy to spot wasteful contracts and negotiate better deals.
 
-## How to Get Started
+### How to Get Started
 
 1. **Collect your providers.** List every subscription, utility, and insurance policy plus renewal dates.
 2. **Connect your bank.** Use secure open-banking connections from apps like Moneyhub or your neobank to import bill history.
@@ -150,7 +150,7 @@ Bill automation tools export data to budgeting apps like YNAB or Emma, making it
 4. **Optimise tariffs.** Run a comparison through Papernest or Tariffly each year to ensure you’re on a competitive rate.
 5. **Review quarterly.** Schedule a 30-minute check-in to adjust limits, confirm mandates, and cancel redundant services.
 
-## Tips and Alternatives
+### Tips and Alternatives
 
 - **Pair with smart meters.** Real-time energy data helps you set accurate alerts for consumption spikes.
 - **Use email forwarding rules.** Send invoices to a shared inbox or task manager so they’re archived automatically.

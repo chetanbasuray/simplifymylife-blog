@@ -38,7 +38,7 @@ Your browser can be a productivity engine—or a chaotic pile of tabs. The right
 
 I rotate between Chrome and Arc depending on the project. Regardless of browser, the extension stack below keeps me organised whether I’m drafting articles, capturing research, or managing client dashboards.
 
-## The Solution: Curate a Lean, Reliable Extension Stack
+### The Solution: Curate a Lean, Reliable Extension Stack
 
 Focus on three pillars: organising tabs, capturing knowledge, and automating repetitive tasks. Add privacy safeguards, and your browser becomes a calming command centre.
 
@@ -120,7 +120,7 @@ Focus on three pillars: organising tabs, capturing knowledge, and automating rep
   </div>
 </section>
 
-## Essential Extensions to Try
+### Essential Extensions to Try
 
 1. **Tab managers.** Workona or Tab Suspender group projects and hibernate unused tabs.
 2. **Note clippers.** Notion Web Clipper, Evernote, and Mem capture research with one click.
@@ -128,7 +128,7 @@ Focus on three pillars: organising tabs, capturing knowledge, and automating rep
 4. **Password management.** 1Password X or Bitwarden auto-fill strong credentials safely.
 5. **Privacy shields.** uBlock Origin, ClearURLs, and Ghostery block trackers and cookie banners.
 
-## How to Get Started
+### How to Get Started
 
 1. **Audit current extensions.** Remove anything you haven’t used in a month.
 2. **Install essentials only.** Add one extension per category to avoid bloat.
@@ -136,7 +136,7 @@ Focus on three pillars: organising tabs, capturing knowledge, and automating rep
 4. **Create workspaces.** Use tab managers to separate personal, client, and learning projects.
 5. **Review weekly.** Close stale tabs, archive notes, and ensure data syncs across devices.
 
-## Tips and Alternatives
+### Tips and Alternatives
 
 - **Match extensions to browser.** Arc, Vivaldi, and Firefox each have unique features—choose the one that aligns with your workflow.
 - **Use profiles.** Separate personal and work profiles to keep logins clean.
