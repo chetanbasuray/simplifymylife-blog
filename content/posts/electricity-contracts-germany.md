@@ -51,16 +51,10 @@ A quick session with CHECK24’s electricity calculator replaces spreadsheet gym
 
 Use the widget below to jump straight into the affiliate-powered calculator. It opens the official CHECK24 flow, keeps the interface in German for compliance, and routes your session to the electricity comparison you need for Germany. Keep this page open in another tab so you can reference the explanations while you enter your details.
 
-<div class="comparison-widget">
-  <iframe
-    src="https://www.check24.net/vergleichsrechner/strom/"
-    title="CHECK24 electricity comparison"
-    width="100%"
-    height="720"
-    loading="lazy"
-    style="border: 1px solid #e2e8f0; border-radius: 16px; background-color: #fff;"
-  ></iframe>
-</div>
+<div style="width: 100%" id="c24pp-dsl-iframe"></div>
+<script src="https://files.check24.net/widgets/auto/127393/c24pp-dsl-iframe/dsl-iframe.js"></script>
+
+<p class="comparison-widget__hint">Copy this HTML snippet directly into any page block. For the cleanest presentation, aim for a viewport width of at least 900 pixels.</p>
 
 <p><strong>CHECK24.net partner disclosure</strong></p><p>We participate in the CHECK24.net partner program. Embedded iFrame booking widgets and other advertising assets on this page may generate a commission for us when you complete a qualifying action such as a lead or sale.</p><p>Read more about data processing directly in the <a href="https://www.check24.net" target="_blank" rel="noopener">CHECK24.net privacy policy</a>.</p>
 
