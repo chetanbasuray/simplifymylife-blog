@@ -47,9 +47,9 @@ A quick session with CHECK24’s electricity calculator replaces spreadsheet gym
   <footer>— Simplify My Life utilities motto</footer>
 </blockquote>
 
-### Embed the CHECK24 electricity comparison calculator
+### Compare tariffs with the CHECK24 calculator
 
-Use the widget below to jump straight into the affiliate-powered calculator. It opens the official CHECK24 flow and routes your session to the electricity comparison you need for Germany.
+Use the widget below to jump straight into the affiliate-powered calculator. It opens the official CHECK24 flow, keeps the interface in German for compliance, and routes your session to the electricity comparison you need for Germany. Keep this page open in another tab so you can reference the explanations while you enter your details.
 
 <div class="comparison-widget">
   <iframe
@@ -62,41 +62,15 @@ Use the widget below to jump straight into the affiliate-powered calculator. It 
   ></iframe>
 </div>
 
-<p><strong>CHECK24.net Partnerprogramm</strong></p><p>Wir nehmen am CHECK24.net Partnerprogramm teil. Auf unseren Seiten werden iFrame-Buchungsmasken und andere Werbemittel eingebunden, an denen wir über Transaktionen, zum Beispiel durch Leads und Sales, eine Werbekostenerstattung erhalten können.</p><p>Weitere Informationen zur Datennutzung durch CHECK24.net erhalten Sie in der Datenschutzerklärung von <a href="https://www.check24.net" target="_blank">CHECK24.net</a>.</p>
+<p><strong>CHECK24.net partner disclosure</strong></p><p>We participate in the CHECK24.net partner program. Embedded iFrame booking widgets and other advertising assets on this page may generate a commission for us when you complete a qualifying action such as a lead or sale.</p><p>Read more about data processing directly in the <a href="https://www.check24.net" target="_blank" rel="noopener">CHECK24.net privacy policy</a>.</p>
 
 ### Step-by-step switching workflow
 
-<div class="cta-card">
-  <div class="cta-card__header">
-    <div class="cta-card__icon" aria-hidden="true">
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="19" fill="#e0f2fe" />
-        <path d="M13 23l5 5 10-14" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </div>
-    <div class="cta-card__badge">Automation tip</div>
-  </div>
-  <div class="cta-card__body">
-    <h4>Download the utility switch checklist</h4>
-    <p>Save a copy of meter readings, contract IDs, and cancellation letters so every future switch takes minutes instead of hours.</p>
-  </div>
-  <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://simplifymylife.app/templates/utility-switch" target="_blank" rel="noopener noreferrer">
-      <span>Get the checklist</span>
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path
-          d="M6.75 17.25l9.5-9.5m0 0H9m7.25 0V15"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.75"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </a>
-    <p class="cta-card__note">Pair it with calendar reminders set 90 days before contract end dates.</p>
-  </div>
-</div>
+Add these simple guardrails to keep the process manageable:
+
+- Save a copy of your meter readings, contract IDs, and cancellation confirmations in a shared folder before you start.
+- Create a recurring task titled “Electricity renewal” that triggers 90 days before your contract ends.
+- Turn on email alerts inside your CHECK24 account so you hear about price spikes ahead of time.
 
 1. **Collect data** – Snap a photo of your latest invoice and confirm the Kündigungsfrist (notice period).
 2. **Fill the calculator** – Enter your details once, then save the CHECK24 profile so the widget auto-populates next year.
