@@ -1,6 +1,6 @@
 ---
 title: "How to Compare Electricity Contracts in Germany with CHECK24"
-date: "Feb 17, 2026"
+date: "Nov 20, 2025"
 tags: ["Finance", "Utilities", "Saving"]
 countryTags:
   - Germany
