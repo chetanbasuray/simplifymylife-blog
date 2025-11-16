@@ -54,8 +54,6 @@ Use the widget below to jump straight into the official CHECK24 DSL flow. It kee
 <div style="width: 100%" id="c24pp-dsl-iframe"></div>
 <script src="https://files.check24.net/widgets/auto/127393/c24pp-dsl-iframe/dsl-iframe.js"></script>
 
-<p class="comparison-widget__hint">Copy this HTML snippet directly into any page block. For the cleanest presentation, aim for a viewport width of at least 900 pixels.</p>
-
 <p><strong>CHECK24.net partner disclosure</strong></p><p>We participate in the CHECK24.net partner program. Embedded iFrame booking widgets and other advertising assets on this page may generate a commission for us when you complete a qualifying action such as a lead or sale.</p><p>Read more about data processing directly in the <a href="https://www.check24.net" target="_blank" rel="noopener">CHECK24.net privacy policy</a>.</p>
 
 ### Step-by-step DSL switching workflow
