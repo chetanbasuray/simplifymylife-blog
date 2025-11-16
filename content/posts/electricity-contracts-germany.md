@@ -51,8 +51,8 @@ A quick session with CHECK24’s electricity calculator replaces spreadsheet gym
 
 Use the widget below to jump straight into the affiliate-powered calculator. It opens the official CHECK24 flow, keeps the interface in German for compliance, and routes your session to the electricity comparison you need for Germany. Keep this page open in another tab so you can reference the explanations while you enter your details.
 
-<div style="width: 100%" id="c24pp-dsl-iframe"></div>
-<script src="https://files.check24.net/widgets/auto/127393/c24pp-dsl-iframe/dsl-iframe.js"></script>
+<div style="width: 100%" id="c24pp-power-iframe" data-scrollto="begin"></div>
+<script src="https://files.check24.net/widgets/auto/127393/c24pp-power-iframe/power-iframe.js"></script>
 
 <p class="comparison-widget__hint">Copy this HTML snippet directly into any page block. For the cleanest presentation, aim for a viewport width of at least 900 pixels.</p>
 
