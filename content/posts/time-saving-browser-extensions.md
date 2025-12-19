@@ -57,7 +57,7 @@ Focus on three pillars: organising tabs, capturing knowledge, and automating rep
     <p>Review installed extensions, rate their usefulness, and remove anything that slows your browser.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://simplifymylife.app/templates/extension-audit" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/extension-audit" target="_blank" rel="noopener noreferrer">
       <span>Audit your stack</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path
@@ -162,7 +162,7 @@ A curated extension stack keeps your browser responsive, organised, and ready fo
     <p>Group research, drafts, and dashboards in Workona or Arc Spaces so you can reopen focused sessions in seconds.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://workona.com/" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/workona" target="_blank" rel="noopener noreferrer">
       <span>Organise with Workona</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path

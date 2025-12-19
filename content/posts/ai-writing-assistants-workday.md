@@ -57,7 +57,7 @@ AI writing assistants act like on-demand collaborators. They draft first version
     <p>Duplicate your weekly meeting template, then let Notion AI summarise action items and translate highlights for stakeholders.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://www.notion.so/product/ai" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/notion-ai" target="_blank" rel="noopener noreferrer">
       <span>Explore Notion AI</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path
@@ -186,7 +186,7 @@ When deadlines are tight and expectations high, AI writing assistants act as cal
     <p>Duplicate Notion’s free AI policy template, customise review checkpoints, and share it with your team so every prompt stays compliant.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://www.notion.so/templates/ai-policy-playbook" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/notion-ai-policy" target="_blank" rel="noopener noreferrer">
       <span>Grab the template</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path

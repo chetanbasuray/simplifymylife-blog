@@ -59,7 +59,7 @@ Build a stack that covers three phases—plan, book, go. Each tool should hand o
     <p>Track flights, lodging, visas, and packing lists in one Notion dashboard synced with your calendar.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://simplifymylife.app/templates/travel-planner" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/travel-planner" target="_blank" rel="noopener noreferrer">
       <span>Get the template</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path

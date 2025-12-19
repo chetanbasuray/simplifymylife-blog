@@ -75,7 +75,7 @@ Neobanks combine slick mobile apps with generous free tiers, making it easy to s
     <p>Track which features you need—multi-currency accounts, shared spaces, disposable cards—before opening your next account.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://simplifymylife.app/templates/fintech-stack" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/fintech-stack" target="_blank" rel="noopener noreferrer">
       <span>Get the checklist</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path

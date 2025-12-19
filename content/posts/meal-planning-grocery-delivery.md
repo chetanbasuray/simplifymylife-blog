@@ -57,7 +57,7 @@ Meal planning tools take your favourite recipes, calculate shopping lists, and e
     <p>Sync Plan to Eat or Mealime with your household’s calendars so everyone sees upcoming dinners and prep reminders.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://www.plantoeat.com" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/plan-to-eat" target="_blank" rel="noopener noreferrer">
       <span>Try Plan to Eat</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path

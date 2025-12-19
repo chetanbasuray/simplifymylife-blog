@@ -58,7 +58,7 @@ The Simplify My Life method splits decluttering into two focused sessions so you
     <p>Duplicate the Notion template we use on the Simplify My Life team to track files, emails, and passwords in one view.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://simplifymylife.app/templates/digital-declutter" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/digital-declutter" target="_blank" rel="noopener noreferrer">
       <span>Grab the template</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path
@@ -177,7 +177,7 @@ A tidy digital environment supports better focus, stronger security, and a calme
     <p>Set up Smart Folders and auto-clean rules so promotional clutter disappears while important messages surface on schedule.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://clean.email/" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/clean-email" target="_blank" rel="noopener noreferrer">
       <span>Automate your inbox</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path

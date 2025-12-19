@@ -57,7 +57,7 @@ Bill automation tools connect to your bank accounts, utility dashboards, and sub
     <p>Upload your existing contracts, and Papernest will suggest cheaper energy, broadband, or mobile deals while setting up direct debits.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://www.papernest.com" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/papernest" target="_blank" rel="noopener noreferrer">
       <span>Visit Papernest</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path
@@ -176,7 +176,7 @@ Automating household bills removes the repetitive admin that clutters busy lives
     <p>Connect your bank, energy provider, and broadband portal so Moneyhub flags anomalies before bills are due.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://www.moneyhub.com/" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/moneyhub" target="_blank" rel="noopener noreferrer">
       <span>Connect Moneyhub</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path

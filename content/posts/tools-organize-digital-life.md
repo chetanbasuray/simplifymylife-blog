@@ -57,7 +57,7 @@ Think of your digital life as four pillars: capture, organise, secure, and autom
     <p>Organise tasks, notes, and reference material in a single Notion workspace with pre-built automation hooks.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://simplifymylife.app/templates/digital-hq" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/digital-hq" target="_blank" rel="noopener noreferrer">
       <span>Build your HQ</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path
@@ -161,7 +161,7 @@ A cohesive digital organisation system unlocks mental space, faster collaboratio
     <p>Create shared vaults, enable passkeys, and add biometric unlocks so your organised workspace stays protected.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://1password.com/" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/1password" target="_blank" rel="noopener noreferrer">
       <span>Try 1Password</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path

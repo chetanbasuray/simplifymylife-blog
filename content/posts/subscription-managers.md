@@ -58,7 +58,7 @@ Many neobanks now surface subscriptions automatically. Pair those insights with 
     <p>Use our Google Sheets template to log price, renewal dates, and cancellation steps so you’re ready for renegotiations.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://simplifymylife.app/templates/subscription-audit" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/subscription-audit" target="_blank" rel="noopener noreferrer">
       <span>Copy the sheet</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path
@@ -177,7 +177,7 @@ Subscription managers give you clarity and control over recurring expenses. They
     <p>Import the template into Emma or Moneyhub, then set automatic alerts whenever a subscription increases by more than 10%.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://emma-app.com/" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/emma-app" target="_blank" rel="noopener noreferrer">
       <span>Connect to Emma</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path
