@@ -4,7 +4,7 @@ date: "Dec 22, 2025"
 tags: ["Banking", "Finance", "Saving"]
 countryTags:
   - Germany
-image: "/images/c24-bank-hero.svg"
+image: "/images/c24-bank-hero.png"
 affiliate: true
 readingTime: "9 min read"
 summary:
@@ -51,7 +51,7 @@ Most free bank accounts strip away features. C24 does the opposite. Even the fre
     <p>Get interest on your balance, 4 free Pockets, and a free Mastercard. Sign up takes less than 10 minutes.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://s.c24.de/ShDYa9mLCF/" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/c24" target="_blank" rel="noopener noreferrer">
       <span>Go to C24 Bank</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path
@@ -71,7 +71,7 @@ Most free bank accounts strip away features. C24 does the opposite. Even the fre
 <section class="switch-feature full-bleed">
   <figure class="switch-feature__media">
     <div class="switch-feature__media-surface">
-      <img src="/images/c24-bank-hero.svg" alt="C24 Bank app interface showing pockets" loading="lazy" />
+      <img src="/images/c24-bank-hero.png" alt="C24 Bank app interface showing pockets" loading="lazy" />
     </div>
     <figcaption>Illustration credit: Simplify My Life team</figcaption>
   </figure>
@@ -157,7 +157,7 @@ For a free account that actively helps you manage your money better, C24 is our 
     <p>Open your C24 Smart account today and start earning interest on your daily spending money.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://s.c24.de/ShDYa9mLCF/" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/c24" target="_blank" rel="noopener noreferrer">
       <span>Open Free Account</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
          <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

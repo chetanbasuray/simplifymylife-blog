@@ -11,7 +11,7 @@ countryTags:
   - Netherlands
   - Belgium
   - Ireland
-image: "/images/trade-republic-hero.svg"
+image: "/images/trade-republic-hero.png"
 affiliate: false
 readingTime: "10 min read"
 summary:
@@ -58,7 +58,7 @@ It separates itself with a "radical simplicity" approach. No complex charts by d
     <p>Join millions of Europeans building wealth. Get a welcome bonus when you sign up and make your first investments.</p>
   </div>
   <div class="cta-card__actions">
-    <a class="cta-card__button" href="https://traderepublic.com" target="_blank" rel="noopener noreferrer">
+    <a class="cta-card__button" href="/recommends/trade-republic" target="_blank" rel="noopener noreferrer">
       <span>Visit Trade Republic</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path
@@ -78,7 +78,7 @@ It separates itself with a "radical simplicity" approach. No complex charts by d
 <section class="switch-feature full-bleed">
   <figure class="switch-feature__media">
     <div class="switch-feature__media-surface">
-      <img src="/images/trade-republic-hero.svg" alt="Trade Republic app interface showing savings plan" loading="lazy" />
+      <img src="/images/trade-republic-hero.png" alt="Trade Republic app interface showing savings plan" loading="lazy" />
     </div>
     <figcaption>Illustration credit: Simplify My Life team</figcaption>
   </figure>
